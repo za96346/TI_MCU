@@ -1,52 +1,3 @@
-/* --COPYRIGHT--,BSD
- * Copyright (c) 2018, Texas Instruments Incorporated
- * All rights reserved.
- *
- * Redistribution and use in source and binary forms, with or without
- * modification, are permitted provided that the following conditions
- * are met:
- *
- * *  Redistributions of source code must retain the above copyright
- *    notice, this list of conditions and the following disclaimer.
- *
- * *  Redistributions in binary form must reproduce the above copyright
- *    notice, this list of conditions and the following disclaimer in the
- *    documentation and/or other materials provided with the distribution.
- *
- * *  Neither the name of Texas Instruments Incorporated nor the names of
- *    its contributors may be used to endorse or promote products derived
- *    from this software without specific prior written permission.
- *
- * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
- * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO,
- * THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
- * PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR
- * CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
- * EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
- * PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS;
- * OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
- * WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
- * OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
- * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
- * --/COPYRIGHT--*/
-//******************************************************************************
-//
-//  main.c
-//
-//  Out of box demo for the MSP-EXP430FR2355 LaunchPad
-//
-//  This demo uses the MSP432FR2355's four built-in Smart Analog Combo (SAC) peripherals
-//  to demonstrate interconnections between SAC pairs and the flexibility for
-//  various configurations.
-//   - Two SACs are used to implement an ambient light sensor with LED feedback
-//   - Two SACs are used to implement a simple function generator and a user controllable
-//     Programmable Gain Amplifier (PGA)
-//
-//  E. Chen
-//  Texas Instruments Inc.
-//  May 2018
-//******************************************************************************
-
 #include <driverlib.h>
 #include <stdint.h>
 #include <stdbool.h>
@@ -108,11 +59,6 @@ void init_GPIO(void) {
     GPIO_setOutputLowOnPin(GPIO_PORT_PC, GPIO_PIN_ALL16);
     GPIO_setOutputLowOnPin(GPIO_PORT_PD, GPIO_PIN_ALL16);
     GPIO_setOutputLowOnPin(GPIO_PORT_PE, GPIO_PIN_ALL16);
-
-    //Set P2.3 (S3) to input
-    GPIO_setAsInputPinWithPullUpResistor(GPIO_PORT_P2, GPIO_PIN3);
-    GPIO_selectInterruptEdge(GPIO_PORT_P2, GPIO_PIN3, GPIO_HIGH_TO_LOW_TRANSITION);
-    GPIO_enableInterrupt(GPIO_PORT_P2, GPIO_PIN3);
 
     PMM_unlockLPM5();
 
@@ -356,25 +302,4 @@ static int jsoneq(const char *json, jsmntok_t *tok, const char *s) {
         return 0;
     }
     return -1;
-}
-
-#if defined(__TI_COMPILER_VERSION__) || defined(__IAR_SYSTEMS_ICC__)
-#pragma vector=PORT2_VECTOR
-__interrupt void PORT2_ISR(void)
-#elif defined(__GNUC__)
-void __attribute__ ((interrupt(PORT2_VECTOR))) PORT2_ISR (void)
-#else
-#error Compiler not supported!
-#endif
-{
-    // Clear P2.3 IFG
-    GPIO_clearInterrupt(GPIO_PORT_P2, GPIO_PIN3);
-
-    functiongenerator_disable();
-    Timer_B_stop(TIMER_B0_BASE);
-
-    Timer_B_startCounter(TIMER_B0_BASE, TIMER_B_UP_MODE);
-    lightsensor_init_ADC();
-
-    __bic_SR_register_on_exit(LPM3_bits);
 }
