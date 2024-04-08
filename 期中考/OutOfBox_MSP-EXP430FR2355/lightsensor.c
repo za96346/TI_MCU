@@ -20,7 +20,6 @@ unsigned int lightsensor_ADC_Result = 0;          // ADC conversion result
 void lightsensor() {
     /* Initialize peripherals */
     lightsensor_init_GPIO();
-    lightsensor_init_LED_PWM();
     lightsensor_init_SACOA();
     lightsensor_init_ADC();
 
@@ -67,26 +66,8 @@ void lightsensor_init_GPIO(void) {
     P6OUT = 0x00;
 
     // 将P5.2设置为输出模式
-   P5DIR |= BIT2;  // 将P5.2设为输出
-   P5OUT &= ~BIT2; // 初始状态设置为低电平
-}
-
-/* Configure TimerB0 to generate PWM on LEDs */
-void lightsensor_init_LED_PWM(void) {
-    //Start timer
-    Timer_B_initUpModeParam param = {0};
-    param.clockSource = TIMER_B_CLOCKSOURCE_ACLK;
-    param.clockSourceDivider = TIMER_B_CLOCKSOURCE_DIVIDER_1;
-    param.timerPeriod = 1;
-    param.timerInterruptEnable_TBIE = TIMER_B_TBIE_INTERRUPT_DISABLE;
-    param.captureCompareInterruptEnable_CCR0_CCIE =
-        TIMER_B_CCIE_CCR0_INTERRUPT_ENABLE;
-    param.startTimer = true;
-    Timer_B_initUpMode(TIMER_B0_BASE, &param);
-}
-
-void lightsensor_disable_LED_PWM(void) {
-    Timer_B_stop(TIMER_B0_BASE);
+    P5DIR |= BIT2;  // 将P5.2设为输出
+    P5OUT &= ~BIT2; // 初始状态设置为低电平
 }
 
 void lightsensor_init_SACOA(void) {
@@ -176,40 +157,4 @@ void lightsensor_init_ADC(void) {
     //Enable and Start the conversion
     //in Single-Channel, Single Conversion Mode
     ADC_startConversion(ADC_BASE, ADC_REPEATED_SINGLECHANNEL);
-}
-
-//******************************************************************************
-//
-//This is the Timer B0 interrupt vector service routine.
-//
-//******************************************************************************
-#if defined(__TI_COMPILER_VERSION__) || defined(__IAR_SYSTEMS_ICC__)
-#pragma vector=TIMER0_B0_VECTOR
-__interrupt
-#elif defined(__GNUC__)
-__attribute__((interrupt(TIMER0_B0_VECTOR)))
-#endif
-void TIMER0_B0_ISR(void)
-{
-    counter++;
-    if (counter > period)
-    {
-        counter = 0;
-        if (led1_dutycycle > 0) {
-            GPIO_setOutputHighOnPin(GPIO_PORT_P1, GPIO_PIN0);
-        }
-        if (led2_dutycycle > 0) {
-            GPIO_setOutputHighOnPin(GPIO_PORT_P6, GPIO_PIN6);
-        }
-    }
-
-    if (counter == led1_dutycycle)
-    {
-        GPIO_setOutputLowOnPin(GPIO_PORT_P1, GPIO_PIN0);
-    }
-
-    if (counter == led2_dutycycle)
-    {
-        GPIO_setOutputLowOnPin(GPIO_PORT_P6, GPIO_PIN6);
-    }
 }
