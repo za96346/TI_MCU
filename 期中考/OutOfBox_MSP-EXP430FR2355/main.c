@@ -61,14 +61,6 @@
 /* Constants */
 #define MAX_STR_LEN         256
 
-/* Global Variables */
-#if defined(__TI_COMPILER_VERSION__)
-#pragma PERSISTENT(mode)
-#elif defined(__IAR_SYSTEMS_ICC__)
-__persistent
-#endif
-char mode = LIGHTSENSOR_MODE;
-
 /* UART variables */
 jsmn_parser p;
 jsmntok_t t[64]; /* We expect no more than 64 tokens */
@@ -215,14 +207,8 @@ void __attribute__ ((interrupt(ADC_VECTOR))) ADC_ISR (void)
         case ADCIV_ADCINIFG:
             break;
         case ADCIV_ADCIFG:
-            if (mode == 0) {
-                lightsensor_ADC_Result = ADCMEM0;
-                __bic_SR_register_on_exit(LPM3_bits);              // Sleep Timer Exits LPM3
-            }
-            else {
-                functiongenerator_ADC_Result = ADCMEM0;
-                __bic_SR_register_on_exit(LPM0_bits);            // Clear CPUOFF bit from LPM0
-            }
+            lightsensor_ADC_Result = ADCMEM0;
+            __bic_SR_register_on_exit(LPM3_bits);              // Sleep Timer Exits LPM3
             break;
         default:
             break;
@@ -302,18 +288,13 @@ void __attribute__ ((interrupt(USCI_A1_VECTOR))) USCI_A1_ISR (void)
                         i++;
                     }
                     if (jsoneq(rxString, &t[i], "mode") == 0) {
-                        mode = strtol( rxString+t[i+1].start, NULL, 10);
                         __bic_SR_register_on_exit(LPM3_bits);
                         i++;
                     }
                 }
 
-                if (mode == FUNCTIONGENERATOR_MODE)
-                    functiongenerator_enable();
-                if (mode == LIGHTSENSOR_MODE) {
-                    Timer_B_startCounter(TIMER_B0_BASE, TIMER_B_UP_MODE);
-                    lightsensor_init_ADC();
-                }
+                Timer_B_startCounter(TIMER_B0_BASE, TIMER_B_UP_MODE);
+                lightsensor_init_ADC();
 
                 rxStringReady = false;
             }
@@ -392,14 +373,8 @@ void __attribute__ ((interrupt(PORT2_VECTOR))) PORT2_ISR (void)
     functiongenerator_disable();
     Timer_B_stop(TIMER_B0_BASE);
 
-    mode ^= 1;
-
-    if (mode == FUNCTIONGENERATOR_MODE)
-        functiongenerator_enable();
-    if (mode == LIGHTSENSOR_MODE) {
-        Timer_B_startCounter(TIMER_B0_BASE, TIMER_B_UP_MODE);
-        lightsensor_init_ADC();
-    }
+    Timer_B_startCounter(TIMER_B0_BASE, TIMER_B_UP_MODE);
+    lightsensor_init_ADC();
 
     __bic_SR_register_on_exit(LPM3_bits);
 }

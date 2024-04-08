@@ -69,7 +69,7 @@ void lightsensor() {
     lightsensor_init_SACOA();
     lightsensor_init_ADC();
 
-    while(mode == LIGHTSENSOR_MODE){
+    while(true){
         __bis_SR_register(LPM0_bits + GIE);
 
         runningAvg = (( runningAvg * 9 ) + lightsensor_ADC_Result)/10;
@@ -110,15 +110,6 @@ void lightsensor_init_GPIO(void) {
 
     P6DIR |= 0xFF;
     P6OUT = 0x00;
-
-    //Set P4.1 (S1) to input
-    P4DIR &= (~BIT1);
-    P4OUT |= BIT1;
-    P4REN |= BIT1;
-    P4IES |= BIT1;
-
-    P4IFG &= ~BIT1;
-    P4IE |= BIT1;
 
     // 将P5.2设置为输出模式
    P5DIR |= BIT2;  // 将P5.2设为输出
