@@ -1,0 +1,686 @@
+
+**** Build of configuration Debug for project OutOfBox_MSP-EXP430FR2355 ****
+
+/Applications/ti/ccs1260/ccs/utils/bin/gmake -k -j 7 all -O 
+ 
+Building file: "../driverlib/MSP430FR2xx_4xx/crc.c"
+Invoking: MSP430 Compiler
+"/Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/bin/cl430" -vmspx --code_model=large --data_model=large --use_hw_mpy=F5 --include_path="/Applications/ti/ccs1260/ccs/ccs_base/msp430/include" --include_path="/Users/siou/Downloads/homework/ti/期中考/OutOfBox_MSP-EXP430FR2355" --include_path="/Users/siou/Downloads/homework/ti/期中考/OutOfBox_MSP-EXP430FR2355/jsmn" --include_path="/Users/siou/Downloads/homework/ti/期中考/OutOfBox_MSP-EXP430FR2355/driverlib/MSP430FR2xx_4xx" --include_path="/Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include" --advice:power="all" --advice:hw_config=all --define=__MSP430FR2355__ --define=_FRWP_ENABLE --define=_INFO_FRWP_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --preproc_with_compile --preproc_dependency="driverlib/MSP430FR2xx_4xx/crc.d_raw" --obj_directory="driverlib/MSP430FR2xx_4xx"  "../driverlib/MSP430FR2xx_4xx/crc.c"
+"../driverlib/MSP430FR2xx_4xx/adc.c", line 176: remark #1528-D: (ULP 3.1) Detected flag polling using ADCBUSY. Recommend using an interrupt combined with enter LPMx and ISR
+"../lightsensor.c", line 75: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../lightsensor.c", line 76: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../lightsensor.c", line 121: remark #1546-D: (ULP 15.1) Detected consecutive bitfield assigns. Recommend using bit mask instead
+"../lightsensor.c", line 122: remark #1546-D: (ULP 15.1) Detected consecutive bitfield assigns. Recommend using bit mask instead
+"../lightsensor.c", line 123: remark #1546-D: (ULP 15.1) Detected consecutive bitfield assigns. Recommend using bit mask instead
+"../lightsensor.c", line 124: remark #1546-D: (ULP 15.1) Detected consecutive bitfield assigns. Recommend using bit mask instead
+"../lightsensor.c", line 126: remark #1546-D: (ULP 15.1) Detected consecutive bitfield assigns. Recommend using bit mask instead
+"../lightsensor.c", line 211: remark #1546-D: (ULP 15.1) Detected consecutive bitfield assigns. Recommend using bit mask instead
+"../lightsensor.c", line 212: remark #1546-D: (ULP 15.1) Detected consecutive bitfield assigns. Recommend using bit mask instead
+"../lightsensor.c", line 213: remark #1546-D: (ULP 15.1) Detected consecutive bitfield assigns. Recommend using bit mask instead
+"../lightsensor.c", line 214: remark #1546-D: (ULP 15.1) Detected consecutive bitfield assigns. Recommend using bit mask instead
+"../lightsensor.c", line 215: remark #1546-D: (ULP 15.1) Detected consecutive bitfield assigns. Recommend using bit mask instead
+"../lightsensor.c", line 241: remark #1538-D: (ULP 10.1) ISR TIMER0_B0_ISR calls function GPIO_setOutputHighOnPin. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../lightsensor.c", line 244: remark #1538-D: (ULP 10.1) ISR TIMER0_B0_ISR calls function GPIO_setOutputHighOnPin. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../lightsensor.c", line 250: remark #1538-D: (ULP 10.1) ISR TIMER0_B0_ISR calls function GPIO_setOutputLowOnPin. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../lightsensor.c", line 255: remark #1538-D: (ULP 10.1) ISR TIMER0_B0_ISR calls function GPIO_setOutputLowOnPin. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../lightsensor.c", line 52: remark #1535-D: (ULP 8.1) variable "period" is used as a constant. Recommend declaring variable as either 'static const' or 'const'
+"../lightsensor.c", line 54: remark #1535-D: (ULP 8.1) variable "deadzone" is used as a constant. Recommend declaring variable as either 'static const' or 'const'
+"../lightsensor.c", line 63: remark #1535-D: (ULP 8.1) variable "lightsensor_ADC_Result" is used as a constant. Recommend declaring variable as either 'static const' or 'const'
+"../main.c", line 162: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"../main.c", line 184: remark #1546-D: (ULP 15.1) Detected consecutive bitfield assigns. Recommend using bit mask instead
+"../main.c", line 185: remark #1546-D: (ULP 15.1) Detected consecutive bitfield assigns. Recommend using bit mask instead
+"../main.c", line 186: remark #1546-D: (ULP 15.1) Detected consecutive bitfield assigns. Recommend using bit mask instead
+"../main.c", line 187: remark #1546-D: (ULP 15.1) Detected consecutive bitfield assigns. Recommend using bit mask instead
+"../main.c", line 188: remark #1546-D: (ULP 15.1) Detected consecutive bitfield assigns. Recommend using bit mask instead
+"../main.c", line 189: remark #1546-D: (ULP 15.1) Detected consecutive bitfield assigns. Recommend using bit mask instead
+"../main.c", line 190: remark #1546-D: (ULP 15.1) Detected consecutive bitfield assigns. Recommend using bit mask instead
+"../main.c", line 191: remark #1546-D: (ULP 15.1) Detected consecutive bitfield assigns. Recommend using bit mask instead
+"../main.c", line 261: remark #1538-D: (ULP 10.1) ISR USCI_A1_ISR calls function functiongenerator_disable. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 262: remark #1538-D: (ULP 10.1) ISR USCI_A1_ISR calls function Timer_B_stop. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 264: remark #1538-D: (ULP 10.1) ISR USCI_A1_ISR calls function receiveString. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 270: remark #1538-D: (ULP 10.1) ISR USCI_A1_ISR calls function jsmn_init. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 271: remark #1538-D: (ULP 10.1) ISR USCI_A1_ISR calls function jsmn_parse. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 271: remark #1538-D: (ULP 10.1) ISR USCI_A1_ISR calls function strlen. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 274: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 275: remark #1538-D: (ULP 10.1) ISR USCI_A1_ISR calls function jsoneq. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 277: remark #1538-D: (ULP 10.1) ISR USCI_A1_ISR calls function strtol. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 277: remark #2553-D: (ULP 14.1) Array index (involving "i") of type "int". Recommend using "unsigned int"
+"../main.c", line 284: remark #1538-D: (ULP 10.1) ISR USCI_A1_ISR calls function jsoneq. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 286: remark #1538-D: (ULP 10.1) ISR USCI_A1_ISR calls function strtol. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 286: remark #2553-D: (ULP 14.1) Array index (involving "i") of type "int". Recommend using "unsigned int"
+"../main.c", line 289: remark #1538-D: (ULP 10.1) ISR USCI_A1_ISR calls function jsoneq. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 291: remark #1538-D: (ULP 10.1) ISR USCI_A1_ISR calls function strtol. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 291: remark #2553-D: (ULP 14.1) Array index (involving "i") of type "int". Recommend using "unsigned int"
+"../main.c", line 294: remark #1538-D: (ULP 10.1) ISR USCI_A1_ISR calls function jsoneq. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 296: remark #1538-D: (ULP 10.1) ISR USCI_A1_ISR calls function strtol. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 296: remark #2553-D: (ULP 14.1) Array index (involving "i") of type "int". Recommend using "unsigned int"
+"../main.c", line 299: remark #1538-D: (ULP 10.1) ISR USCI_A1_ISR calls function jsoneq. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 301: remark #1538-D: (ULP 10.1) ISR USCI_A1_ISR calls function strtol. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 301: remark #2553-D: (ULP 14.1) Array index (involving "i") of type "int". Recommend using "unsigned int"
+"../main.c", line 304: remark #1538-D: (ULP 10.1) ISR USCI_A1_ISR calls function jsoneq. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 306: remark #1538-D: (ULP 10.1) ISR USCI_A1_ISR calls function strtol. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 306: remark #2553-D: (ULP 14.1) Array index (involving "i") of type "int". Recommend using "unsigned int"
+"../main.c", line 309: remark #1538-D: (ULP 10.1) ISR USCI_A1_ISR calls function jsoneq. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 311: remark #1538-D: (ULP 10.1) ISR USCI_A1_ISR calls function strtol. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 311: remark #2553-D: (ULP 14.1) Array index (involving "i") of type "int". Recommend using "unsigned int"
+"../main.c", line 314: remark #1538-D: (ULP 10.1) ISR USCI_A1_ISR calls function jsoneq. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 316: remark #1538-D: (ULP 10.1) ISR USCI_A1_ISR calls function strtol. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 316: remark #2553-D: (ULP 14.1) Array index (involving "i") of type "int". Recommend using "unsigned int"
+"../main.c", line 319: remark #1538-D: (ULP 10.1) ISR USCI_A1_ISR calls function jsoneq. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 320: remark #1538-D: (ULP 10.1) ISR USCI_A1_ISR calls function strtol. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 320: remark #2553-D: (ULP 14.1) Array index (involving "i") of type "int". Recommend using "unsigned int"
+"../main.c", line 327: remark #1538-D: (ULP 10.1) ISR USCI_A1_ISR calls function functiongenerator_enable. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 329: remark #1538-D: (ULP 10.1) ISR USCI_A1_ISR calls function Timer_B_startCounter. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 330: remark #1538-D: (ULP 10.1) ISR USCI_A1_ISR calls function lightsensor_init_ADC. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 261: remark #1538-D: (ULP 10.1) ISR USCI_A1_ISR calls function functiongenerator_disable. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 262: remark #1538-D: (ULP 10.1) ISR USCI_A1_ISR calls function Timer_B_stop. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 264: remark #1538-D: (ULP 10.1) ISR USCI_A1_ISR calls function receiveString. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 270: remark #1538-D: (ULP 10.1) ISR USCI_A1_ISR calls function jsmn_init. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 271: remark #1538-D: (ULP 10.1) ISR USCI_A1_ISR calls function jsmn_parse. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 271: remark #1538-D: (ULP 10.1) ISR USCI_A1_ISR calls function strlen. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 274: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 275: remark #1538-D: (ULP 10.1) ISR USCI_A1_ISR calls function jsoneq. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 277: remark #1538-D: (ULP 10.1) ISR USCI_A1_ISR calls function strtol. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 277: remark #2553-D: (ULP 14.1) Array index (involving "i") of type "int". Recommend using "unsigned int"
+"../main.c", line 284: remark #1538-D: (ULP 10.1) ISR USCI_A1_ISR calls function jsoneq. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 286: remark #1538-D: (ULP 10.1) ISR USCI_A1_ISR calls function strtol. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 286: remark #2553-D: (ULP 14.1) Array index (involving "i") of type "int". Recommend using "unsigned int"
+"../main.c", line 289: remark #1538-D: (ULP 10.1) ISR USCI_A1_ISR calls function jsoneq. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 291: remark #1538-D: (ULP 10.1) ISR USCI_A1_ISR calls function strtol. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 291: remark #2553-D: (ULP 14.1) Array index (involving "i") of type "int". Recommend using "unsigned int"
+"../main.c", line 294: remark #1538-D: (ULP 10.1) ISR USCI_A1_ISR calls function jsoneq. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 296: remark #1538-D: (ULP 10.1) ISR USCI_A1_ISR calls function strtol. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 296: remark #2553-D: (ULP 14.1) Array index (involving "i") of type "int". Recommend using "unsigned int"
+"../main.c", line 299: remark #1538-D: (ULP 10.1) ISR USCI_A1_ISR calls function jsoneq. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 301: remark #1538-D: (ULP 10.1) ISR USCI_A1_ISR calls function strtol. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 301: remark #2553-D: (ULP 14.1) Array index (involving "i") of type "int". Recommend using "unsigned int"
+"../main.c", line 304: remark #1538-D: (ULP 10.1) ISR USCI_A1_ISR calls function jsoneq. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 306: remark #1538-D: (ULP 10.1) ISR USCI_A1_ISR calls function strtol. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 306: remark #2553-D: (ULP 14.1) Array index (involving "i") of type "int". Recommend using "unsigned int"
+"../main.c", line 309: remark #1538-D: (ULP 10.1) ISR USCI_A1_ISR calls function jsoneq. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 311: remark #1538-D: (ULP 10.1) ISR USCI_A1_ISR calls function strtol. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 311: remark #2553-D: (ULP 14.1) Array index (involving "i") of type "int". Recommend using "unsigned int"
+"../main.c", line 314: remark #1538-D: (ULP 10.1) ISR USCI_A1_ISR calls function jsoneq. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 316: remark #1538-D: (ULP 10.1) ISR USCI_A1_ISR calls function strtol. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 316: remark #2553-D: (ULP 14.1) Array index (involving "i") of type "int". Recommend using "unsigned int"
+"../main.c", line 319: remark #1538-D: (ULP 10.1) ISR USCI_A1_ISR calls function jsoneq. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 320: remark #1538-D: (ULP 10.1) ISR USCI_A1_ISR calls function strtol. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 320: remark #2553-D: (ULP 14.1) Array index (involving "i") of type "int". Recommend using "unsigned int"
+"../main.c", line 327: remark #1538-D: (ULP 10.1) ISR USCI_A1_ISR calls function functiongenerator_enable. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 329: remark #1538-D: (ULP 10.1) ISR USCI_A1_ISR calls function Timer_B_startCounter. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 330: remark #1538-D: (ULP 10.1) ISR USCI_A1_ISR calls function lightsensor_init_ADC. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 270: remark #1538-D: (ULP 10.1) ISR USCI_A1_ISR calls function jsmn_init. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 271: remark #1538-D: (ULP 10.1) ISR USCI_A1_ISR calls function jsmn_parse. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 271: remark #1538-D: (ULP 10.1) ISR USCI_A1_ISR calls function strlen. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 274: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 275: remark #1538-D: (ULP 10.1) ISR USCI_A1_ISR calls function jsoneq. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 277: remark #1538-D: (ULP 10.1) ISR USCI_A1_ISR calls function strtol. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 277: remark #2553-D: (ULP 14.1) Array index (involving "i") of type "int". Recommend using "unsigned int"
+"../main.c", line 284: remark #1538-D: (ULP 10.1) ISR USCI_A1_ISR calls function jsoneq. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 286: remark #1538-D: (ULP 10.1) ISR USCI_A1_ISR calls function strtol. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 286: remark #2553-D: (ULP 14.1) Array index (involving "i") of type "int". Recommend using "unsigned int"
+"../main.c", line 289: remark #1538-D: (ULP 10.1) ISR USCI_A1_ISR calls function jsoneq. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 291: remark #1538-D: (ULP 10.1) ISR USCI_A1_ISR calls function strtol. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 291: remark #2553-D: (ULP 14.1) Array index (involving "i") of type "int". Recommend using "unsigned int"
+"../main.c", line 294: remark #1538-D: (ULP 10.1) ISR USCI_A1_ISR calls function jsoneq. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 296: remark #1538-D: (ULP 10.1) ISR USCI_A1_ISR calls function strtol. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 296: remark #2553-D: (ULP 14.1) Array index (involving "i") of type "int". Recommend using "unsigned int"
+"../main.c", line 299: remark #1538-D: (ULP 10.1) ISR USCI_A1_ISR calls function jsoneq. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 301: remark #1538-D: (ULP 10.1) ISR USCI_A1_ISR calls function strtol. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 301: remark #2553-D: (ULP 14.1) Array index (involving "i") of type "int". Recommend using "unsigned int"
+"../main.c", line 304: remark #1538-D: (ULP 10.1) ISR USCI_A1_ISR calls function jsoneq. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 306: remark #1538-D: (ULP 10.1) ISR USCI_A1_ISR calls function strtol. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 306: remark #2553-D: (ULP 14.1) Array index (involving "i") of type "int". Recommend using "unsigned int"
+"../main.c", line 309: remark #1538-D: (ULP 10.1) ISR USCI_A1_ISR calls function jsoneq. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 311: remark #1538-D: (ULP 10.1) ISR USCI_A1_ISR calls function strtol. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 311: remark #2553-D: (ULP 14.1) Array index (involving "i") of type "int". Recommend using "unsigned int"
+"../main.c", line 314: remark #1538-D: (ULP 10.1) ISR USCI_A1_ISR calls function jsoneq. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 316: remark #1538-D: (ULP 10.1) ISR USCI_A1_ISR calls function strtol. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 316: remark #2553-D: (ULP 14.1) Array index (involving "i") of type "int". Recommend using "unsigned int"
+"../main.c", line 319: remark #1538-D: (ULP 10.1) ISR USCI_A1_ISR calls function jsoneq. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 320: remark #1538-D: (ULP 10.1) ISR USCI_A1_ISR calls function strtol. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 320: remark #2553-D: (ULP 14.1) Array index (involving "i") of type "int". Recommend using "unsigned int"
+"../main.c", line 327: remark #1538-D: (ULP 10.1) ISR USCI_A1_ISR calls function functiongenerator_enable. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 329: remark #1538-D: (ULP 10.1) ISR USCI_A1_ISR calls function Timer_B_startCounter. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 330: remark #1538-D: (ULP 10.1) ISR USCI_A1_ISR calls function lightsensor_init_ADC. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 352: remark #1528-D: (ULP 3.1) Detected flag polling using EUSCI_A_UART_BUSY. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 347: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 405: remark #1538-D: (ULP 10.1) ISR PORT2_ISR calls function GPIO_clearInterrupt. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 407: remark #1538-D: (ULP 10.1) ISR PORT2_ISR calls function functiongenerator_disable. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 408: remark #1538-D: (ULP 10.1) ISR PORT2_ISR calls function Timer_B_stop. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 413: remark #1538-D: (ULP 10.1) ISR PORT2_ISR calls function functiongenerator_enable. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 415: remark #1538-D: (ULP 10.1) ISR PORT2_ISR calls function Timer_B_startCounter. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 416: remark #1538-D: (ULP 10.1) ISR PORT2_ISR calls function lightsensor_init_ADC. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../functiongenerator.c", line 142: remark #1532-D: (ULP 5.3) Detected sprintf() operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../functiongenerator.c", line 144: remark #1532-D: (ULP 5.3) Detected sprintf() operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../functiongenerator.c", line 146: remark #1532-D: (ULP 5.3) Detected sprintf() operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../functiongenerator.c", line 148: remark #1532-D: (ULP 5.3) Detected sprintf() operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../functiongenerator.c", line 150: remark #1532-D: (ULP 5.3) Detected sprintf() operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../functiongenerator.c", line 152: remark #1532-D: (ULP 5.3) Detected sprintf() operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../functiongenerator.c", line 154: remark #1532-D: (ULP 5.3) Detected sprintf() operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../functiongenerator.c", line 156: remark #1532-D: (ULP 5.3) Detected sprintf() operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../functiongenerator.c", line 163: remark #1532-D: (ULP 5.3) Detected sprintf() operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../functiongenerator.c", line 214: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../functiongenerator.c", line 218: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../functiongenerator.c", line 219: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../functiongenerator.c", line 224: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../functiongenerator.c", line 224: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../functiongenerator.c", line 227: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../functiongenerator.c", line 227: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../functiongenerator.c", line 232: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../functiongenerator.c", line 233: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../functiongenerator.c", line 249: remark #1546-D: (ULP 15.1) Detected consecutive bitfield assigns. Recommend using bit mask instead
+"../functiongenerator.c", line 250: remark #1546-D: (ULP 15.1) Detected consecutive bitfield assigns. Recommend using bit mask instead
+"../functiongenerator.c", line 251: remark #1546-D: (ULP 15.1) Detected consecutive bitfield assigns. Recommend using bit mask instead
+"../functiongenerator.c", line 250: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../functiongenerator.c", line 252: remark #1546-D: (ULP 15.1) Detected consecutive bitfield assigns. Recommend using bit mask instead
+"../functiongenerator.c", line 253: remark #1546-D: (ULP 15.1) Detected consecutive bitfield assigns. Recommend using bit mask instead
+"../functiongenerator.c", line 253: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../functiongenerator.c", line 364: remark #1546-D: (ULP 15.1) Detected consecutive bitfield assigns. Recommend using bit mask instead
+"../functiongenerator.c", line 365: remark #1546-D: (ULP 15.1) Detected consecutive bitfield assigns. Recommend using bit mask instead
+"../functiongenerator.c", line 366: remark #1546-D: (ULP 15.1) Detected consecutive bitfield assigns. Recommend using bit mask instead
+"../functiongenerator.c", line 365: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../functiongenerator.c", line 367: remark #1546-D: (ULP 15.1) Detected consecutive bitfield assigns. Recommend using bit mask instead
+"../functiongenerator.c", line 368: remark #1546-D: (ULP 15.1) Detected consecutive bitfield assigns. Recommend using bit mask instead
+"../functiongenerator.c", line 368: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../functiongenerator.c", line 392: remark #1538-D: (ULP 10.1) ISR SAC3_ISR calls function SAC_DAC_setData. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../functiongenerator.c", line 73: remark #1535-D: (ULP 8.1) variable "inputSignalSource" is used as a constant. Recommend declaring variable as either 'static const' or 'const'
+"../functiongenerator.c", line 80: remark #1535-D: (ULP 8.1) variable "signalType" is used as a constant. Recommend declaring variable as either 'static const' or 'const'
+"../functiongenerator.c", line 87: remark #1535-D: (ULP 8.1) variable "dacFreq" is used as a constant. Recommend declaring variable as either 'static const' or 'const'
+"../functiongenerator.c", line 101: remark #1535-D: (ULP 8.1) variable "signalFreq" is used as a constant. Recommend declaring variable as either 'static const' or 'const'
+"../functiongenerator.c", line 108: remark #1535-D: (ULP 8.1) variable "signalAmp" is used as a constant. Recommend declaring variable as either 'static const' or 'const'
+"../functiongenerator.c", line 115: remark #1535-D: (ULP 8.1) variable "opAmpMode" is used as a constant. Recommend declaring variable as either 'static const' or 'const'
+"../functiongenerator.c", line 122: remark #1535-D: (ULP 8.1) variable "opAmpGain" is used as a constant. Recommend declaring variable as either 'static const' or 'const'
+"../functiongenerator.c", line 129: remark #1535-D: (ULP 8.1) variable "adcFreq" is used as a constant. Recommend declaring variable as either 'static const' or 'const'
+"../functiongenerator.c", line 137: remark #1535-D: (ULP 8.1) variable "functiongenerator_ADC_Result" is used as a constant. Recommend declaring variable as either 'static const' or 'const'
+"/Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include/_defs.h", line 334 (col. 37): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"/Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include/_defs.h", line 335 (col. 10): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"/Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include/_defs.h", line 336 (col. 37): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"/Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include/_defs.h", line 337 (col. 10): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"/Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include/_defs.h", line 338 (col. 37): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"/Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include/_defs.h", line 339 (col. 10): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"/Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include/_defs.h", line 341 (col. 37): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"/Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include/_defs.h", line 342 (col. 10): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"/Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include/_defs.h", line 343 (col. 10): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"/Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include/_defs.h", line 344 (col. 37): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"/Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include/_defs.h", line 345 (col. 10): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"/Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include/_defs.h", line 346 (col. 10): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"/Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include/_defs.h", line 347 (col. 37): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"/Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include/_defs.h", line 348 (col. 10): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"/Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include/_defs.h", line 349 (col. 10): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"/Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include/_defs.h", line 351 (col. 37): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"/Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include/_defs.h", line 352 (col. 11): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"/Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include/_defs.h", line 353 (col. 11): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"/Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include/_defs.h", line 355 (col. 37): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"/Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include/_defs.h", line 356 (col. 11): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"/Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include/_defs.h", line 357 (col. 11): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"/Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include/_defs.h", line 359 (col. 37): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"/Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include/_defs.h", line 360 (col. 11): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"/Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include/_defs.h", line 361 (col. 11): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"/Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include/_defs.h", line 363 (col. 37): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"/Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include/_defs.h", line 364 (col. 10): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"/Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include/_defs.h", line 365 (col. 37): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"/Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include/_defs.h", line 366 (col. 10): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"/Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include/_defs.h", line 367 (col. 37): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"/Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include/_defs.h", line 368 (col. 10): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"/Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include/_defs.h", line 374 (col. 37): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"/Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include/_defs.h", line 375 (col. 10): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"/Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include/_defs.h", line 376 (col. 37): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"/Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include/_defs.h", line 377 (col. 10): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"/Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include/_defs.h", line 378 (col. 37): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"/Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include/_defs.h", line 379 (col. 10): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"/Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include/_defs.h", line 396 (col. 37): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"/Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include/_defs.h", line 398 (col. 9): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"/Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include/_defs.h", line 400 (col. 13): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"/Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include/_defs.h", line 404 (col. 9): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"/Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include/_defs.h", line 406 (col. 13): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"/Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include/_defs.h", line 413 (col. 37): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"/Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include/_defs.h", line 415 (col. 9): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"/Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include/_defs.h", line 417 (col. 13): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"/Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include/_defs.h", line 421 (col. 9): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"/Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include/_defs.h", line 423 (col. 13): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"/Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include/_defs.h", line 430 (col. 37): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"/Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include/_defs.h", line 432 (col. 9): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"/Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include/_defs.h", line 434 (col. 13): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"/Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include/_defs.h", line 438 (col. 9): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"/Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include/_defs.h", line 440 (col. 13): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../functiongenerator.c", line 218 (col. 15): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../functiongenerator.c", line 220 (col. 29): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../functiongenerator.c", line 232 (col. 15): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../functiongenerator.c", line 234 (col. 28): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../driverlib/MSP430FR2xx_4xx/eusci_a_uart.c", line 55: remark #1535-D: (ULP 8.1) variable "retVal" is used as a constant. Recommend declaring variable as either 'static const' or 'const'
+"../driverlib/MSP430FR2xx_4xx/eusci_a_uart.c", line 121: remark #1528-D: (ULP 3.1) Detected flag polling using UCTXIFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../driverlib/MSP430FR2xx_4xx/eusci_a_uart.c", line 136: remark #1528-D: (ULP 3.1) Detected flag polling using UCRXIFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../driverlib/MSP430FR2xx_4xx/eusci_a_uart.c", line 251: remark #1528-D: (ULP 3.1) Detected flag polling using UCTXIFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../driverlib/MSP430FR2xx_4xx/eusci_a_spi.c", line 69: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../driverlib/MSP430FR2xx_4xx/eusci_a_spi.c", line 104: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../driverlib/MSP430FR2xx_4xx/eusci_b_spi.c", line 69: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../driverlib/MSP430FR2xx_4xx/eusci_b_spi.c", line 102: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../driverlib/MSP430FR2xx_4xx/framctl.c", line 59: remark #1535-D: (ULP 8.1) variable "wp" is used as a constant. Recommend declaring variable as either 'static const' or 'const'
+"../driverlib/MSP430FR2xx_4xx/framctl.c", line 92: remark #1535-D: (ULP 8.1) variable "wp" is used as a constant. Recommend declaring variable as either 'static const' or 'const'
+"../driverlib/MSP430FR2xx_4xx/framctl.c", line 125: remark #1535-D: (ULP 8.1) variable "wp" is used as a constant. Recommend declaring variable as either 'static const' or 'const'
+"../driverlib/MSP430FR2xx_4xx/framctl.c", line 158: remark #1535-D: (ULP 8.1) variable "wp" is used as a constant. Recommend declaring variable as either 'static const' or 'const'
+"../driverlib/MSP430FR2xx_4xx/cs.c", line 171: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../driverlib/MSP430FR2xx_4xx/cs.c", line 186: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../driverlib/MSP430FR2xx_4xx/cs.c", line 215: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../driverlib/MSP430FR2xx_4xx/cs.c", line 219: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../driverlib/MSP430FR2xx_4xx/cs.c", line 224: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../driverlib/MSP430FR2xx_4xx/cs.c", line 258: remark #1527-D: (ULP 2.1) Detected SW delay loop using __delay_cycles. Recommend using a timer module instead
+"../driverlib/MSP430FR2xx_4xx/cs.c", line 261: remark #1527-D: (ULP 2.1) Detected SW delay loop using __delay_cycles. Recommend using a timer module instead
+"../driverlib/MSP430FR2xx_4xx/cs.c", line 264: remark #1527-D: (ULP 2.1) Detected SW delay loop using __delay_cycles. Recommend using a timer module instead
+"../driverlib/MSP430FR2xx_4xx/cs.c", line 267: remark #1527-D: (ULP 2.1) Detected SW delay loop using __delay_cycles. Recommend using a timer module instead
+"../driverlib/MSP430FR2xx_4xx/cs.c", line 270: remark #1527-D: (ULP 2.1) Detected SW delay loop using __delay_cycles. Recommend using a timer module instead
+"../driverlib/MSP430FR2xx_4xx/cs.c", line 273: remark #1527-D: (ULP 2.1) Detected SW delay loop using __delay_cycles. Recommend using a timer module instead
+"../driverlib/MSP430FR2xx_4xx/cs.c", line 276: remark #1527-D: (ULP 2.1) Detected SW delay loop using __delay_cycles. Recommend using a timer module instead
+"../driverlib/MSP430FR2xx_4xx/cs.c", line 279: remark #1527-D: (ULP 2.1) Detected SW delay loop using __delay_cycles. Recommend using a timer module instead
+"../driverlib/MSP430FR2xx_4xx/cs.c", line 282: remark #1527-D: (ULP 2.1) Detected SW delay loop using __delay_cycles. Recommend using a timer module instead
+"../driverlib/MSP430FR2xx_4xx/cs.c", line 287: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"../driverlib/MSP430FR2xx_4xx/cs.c", line 344: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"../driverlib/MSP430FR2xx_4xx/cs.c", line 681: remark #1535-D: (ULP 8.1) variable "dco_FLLD" is used as a constant. Recommend declaring variable as either 'static const' or 'const'
+"../driverlib/MSP430FR2xx_4xx/cs.c", line 783: remark #1535-D: (ULP 8.1) variable "dco_FLLD" is used as a constant. Recommend declaring variable as either 'static const' or 'const'
+"../driverlib/MSP430FR2xx_4xx/cs.c", line 903: remark #1535-D: (ULP 8.1) variable "dco_FLLD" is used as a constant. Recommend declaring variable as either 'static const' or 'const'
+"../driverlib/MSP430FR2xx_4xx/eusci_b_i2c.c", line 84: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../driverlib/MSP430FR2xx_4xx/eusci_b_i2c.c", line 207: remark #1528-D: (ULP 3.1) Detected flag polling using UCTXIFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../driverlib/MSP430FR2xx_4xx/eusci_b_i2c.c", line 216: remark #1528-D: (ULP 3.1) Detected flag polling using UCTXIFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../driverlib/MSP430FR2xx_4xx/eusci_b_i2c.c", line 240: remark #1528-D: (ULP 3.1) Detected flag polling using UCRXIFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../driverlib/MSP430FR2xx_4xx/eusci_b_i2c.c", line 266: remark #1528-D: (ULP 3.1) Detected flag polling using UCTXIFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../driverlib/MSP430FR2xx_4xx/eusci_b_i2c.c", line 281: remark #1528-D: (ULP 3.1) Detected flag polling using UCTXIFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../driverlib/MSP430FR2xx_4xx/eusci_b_i2c.c", line 317: remark #1528-D: (ULP 3.1) Detected flag polling using UCTXIFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../driverlib/MSP430FR2xx_4xx/eusci_b_i2c.c", line 343: remark #1528-D: (ULP 3.1) Detected flag polling using UCTXIFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../driverlib/MSP430FR2xx_4xx/eusci_b_i2c.c", line 370: remark #1528-D: (ULP 3.1) Detected flag polling using UCTXIFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../driverlib/MSP430FR2xx_4xx/eusci_b_i2c.c", line 388: remark #1528-D: (ULP 3.1) Detected flag polling using UCTXIFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../driverlib/MSP430FR2xx_4xx/eusci_b_i2c.c", line 413: remark #1528-D: (ULP 3.1) Detected flag polling using UCTXIFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../driverlib/MSP430FR2xx_4xx/eusci_b_i2c.c", line 423: remark #1528-D: (ULP 3.1) Detected flag polling using UCTXIFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../driverlib/MSP430FR2xx_4xx/eusci_b_i2c.c", line 442: remark #1528-D: (ULP 3.1) Detected flag polling using UCTXIFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../driverlib/MSP430FR2xx_4xx/eusci_b_i2c.c", line 458: remark #1528-D: (ULP 3.1) Detected flag polling using UCTXIFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../driverlib/MSP430FR2xx_4xx/eusci_b_i2c.c", line 486: remark #1528-D: (ULP 3.1) Detected flag polling using UCTXIFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../driverlib/MSP430FR2xx_4xx/eusci_b_i2c.c", line 503: remark #1528-D: (ULP 3.1) Detected flag polling using UCTXIFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../driverlib/MSP430FR2xx_4xx/eusci_b_i2c.c", line 543: remark #1528-D: (ULP 3.1) Detected flag polling using UCRXIFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../driverlib/MSP430FR2xx_4xx/eusci_b_i2c.c", line 540: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"../driverlib/MSP430FR2xx_4xx/eusci_b_i2c.c", line 576: remark #1528-D: (ULP 3.1) Detected flag polling using UCRXIFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../driverlib/MSP430FR2xx_4xx/eusci_b_i2c.c", line 564: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"../driverlib/MSP430FR2xx_4xx/eusci_b_i2c.c", line 617: remark #1528-D: (ULP 3.1) Detected flag polling using UCRXIFG0. Recommend using an interrupt combined with enter LPMx and ISR
+"../driverlib/MSP430FR2xx_4xx/icc.c", line 67: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../driverlib/MSP430FR2xx_4xx/icc.c", line 76: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../driverlib/MSP430FR2xx_4xx/icc.c", line 85: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../driverlib/MSP430FR2xx_4xx/icc.c", line 94: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../driverlib/MSP430FR2xx_4xx/icc.c", line 109: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../driverlib/MSP430FR2xx_4xx/icc.c", line 118: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../driverlib/MSP430FR2xx_4xx/icc.c", line 127: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../driverlib/MSP430FR2xx_4xx/icc.c", line 136: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../jsmn/jsmn.c", line 64: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../jsmn/jsmn.c", line 115: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../jsmn/jsmn.c", line 147: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../jsmn/jsmn.c", line 147: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../jsmn/jsmn.c", line 147: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../jsmn/jsmn.c", line 180: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../jsmn/jsmn.c", line 195: remark #2553-D: (ULP 14.1) Array index (involving "parser") of type "int". Recommend using "unsigned int"
+"../jsmn/jsmn.c", line 258: remark #2553-D: (ULP 14.1) Array index (involving "parser") of type "int". Recommend using "unsigned int"
+"../jsmn/jsmn.c", line 267: remark #2553-D: (ULP 14.1) Array index (involving "parser") of type "int". Recommend using "unsigned int"
+"../jsmn/jsmn.c", line 268: remark #2553-D: (ULP 14.1) Array index (involving "parser") of type "int". Recommend using "unsigned int"
+"../jsmn/jsmn.c", line 273: remark #2553-D: (ULP 14.1) Array index (involving "i") of type "int". Recommend using "unsigned int"
+"../jsmn/jsmn.c", line 273: remark #2553-D: (ULP 14.1) Array index (involving "i") of type "int". Recommend using "unsigned int"
+"../jsmn/jsmn.c", line 274: remark #2553-D: (ULP 14.1) Array index (involving "i") of type "int". Recommend using "unsigned int"
+"../jsmn/jsmn.c", line 274: remark #2553-D: (ULP 14.1) Array index (involving "i") of type "int". Recommend using "unsigned int"
+"../jsmn/jsmn.c", line 304: remark #2553-D: (ULP 14.1) Array index (involving "parser") of type "int". Recommend using "unsigned int"
+"../jsmn/jsmn.c", line 318: remark #2553-D: (ULP 14.1) Array index (involving "i") of type "int". Recommend using "unsigned int"
+"../jsmn/jsmn.c", line 318: remark #2553-D: (ULP 14.1) Array index (involving "i") of type "int". Recommend using "unsigned int"
+"../jsmn/jsmn.c", line 195: remark #2553-D: (ULP 14.1) Array index (involving "parser") of type "int". Recommend using "unsigned int"
+"../jsmn/jsmn.c", line 258: remark #2553-D: (ULP 14.1) Array index (involving "parser") of type "int". Recommend using "unsigned int"
+"../jsmn/jsmn.c", line 267: remark #2553-D: (ULP 14.1) Array index (involving "parser") of type "int". Recommend using "unsigned int"
+"../jsmn/jsmn.c", line 268: remark #2553-D: (ULP 14.1) Array index (involving "parser") of type "int". Recommend using "unsigned int"
+"../jsmn/jsmn.c", line 273: remark #2553-D: (ULP 14.1) Array index (involving "i") of type "int". Recommend using "unsigned int"
+"../jsmn/jsmn.c", line 273: remark #2553-D: (ULP 14.1) Array index (involving "i") of type "int". Recommend using "unsigned int"
+"../jsmn/jsmn.c", line 274: remark #2553-D: (ULP 14.1) Array index (involving "i") of type "int". Recommend using "unsigned int"
+"../jsmn/jsmn.c", line 274: remark #2553-D: (ULP 14.1) Array index (involving "i") of type "int". Recommend using "unsigned int"
+"../jsmn/jsmn.c", line 304: remark #2553-D: (ULP 14.1) Array index (involving "parser") of type "int". Recommend using "unsigned int"
+Finished building: "../driverlib/MSP430FR2xx_4xx/crc.c"
+ 
+Building file: "../driverlib/MSP430FR2xx_4xx/adc.c"
+Invoking: MSP430 Compiler
+"/Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/bin/cl430" -vmspx --code_model=large --data_model=large --use_hw_mpy=F5 --include_path="/Applications/ti/ccs1260/ccs/ccs_base/msp430/include" --include_path="/Users/siou/Downloads/homework/ti/期中考/OutOfBox_MSP-EXP430FR2355" --include_path="/Users/siou/Downloads/homework/ti/期中考/OutOfBox_MSP-EXP430FR2355/jsmn" --include_path="/Users/siou/Downloads/homework/ti/期中考/OutOfBox_MSP-EXP430FR2355/driverlib/MSP430FR2xx_4xx" --include_path="/Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include" --advice:power="all" --advice:hw_config=all --define=__MSP430FR2355__ --define=_FRWP_ENABLE --define=_INFO_FRWP_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --preproc_with_compile --preproc_dependency="driverlib/MSP430FR2xx_4xx/adc.d_raw" --obj_directory="driverlib/MSP430FR2xx_4xx"  "../driverlib/MSP430FR2xx_4xx/adc.c"
+Finished building: "../driverlib/MSP430FR2xx_4xx/adc.c"
+ 
+Building file: "../driverlib/MSP430FR2xx_4xx/ecomp.c"
+Invoking: MSP430 Compiler
+"/Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/bin/cl430" -vmspx --code_model=large --data_model=large --use_hw_mpy=F5 --include_path="/Applications/ti/ccs1260/ccs/ccs_base/msp430/include" --include_path="/Users/siou/Downloads/homework/ti/期中考/OutOfBox_MSP-EXP430FR2355" --include_path="/Users/siou/Downloads/homework/ti/期中考/OutOfBox_MSP-EXP430FR2355/jsmn" --include_path="/Users/siou/Downloads/homework/ti/期中考/OutOfBox_MSP-EXP430FR2355/driverlib/MSP430FR2xx_4xx" --include_path="/Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include" --advice:power="all" --advice:hw_config=all --define=__MSP430FR2355__ --define=_FRWP_ENABLE --define=_INFO_FRWP_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --preproc_with_compile --preproc_dependency="driverlib/MSP430FR2xx_4xx/ecomp.d_raw" --obj_directory="driverlib/MSP430FR2xx_4xx"  "../driverlib/MSP430FR2xx_4xx/ecomp.c"
+Finished building: "../driverlib/MSP430FR2xx_4xx/ecomp.c"
+ 
+Building file: "../lightsensor.c"
+Invoking: MSP430 Compiler
+"/Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/bin/cl430" -vmspx --code_model=large --data_model=large --use_hw_mpy=F5 --include_path="/Applications/ti/ccs1260/ccs/ccs_base/msp430/include" --include_path="/Users/siou/Downloads/homework/ti/期中考/OutOfBox_MSP-EXP430FR2355" --include_path="/Users/siou/Downloads/homework/ti/期中考/OutOfBox_MSP-EXP430FR2355/jsmn" --include_path="/Users/siou/Downloads/homework/ti/期中考/OutOfBox_MSP-EXP430FR2355/driverlib/MSP430FR2xx_4xx" --include_path="/Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include" --advice:power="all" --advice:hw_config=all --define=__MSP430FR2355__ --define=_FRWP_ENABLE --define=_INFO_FRWP_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --preproc_with_compile --preproc_dependency="lightsensor.d_raw"  "../lightsensor.c"
+Finished building: "../lightsensor.c"
+ 
+Building file: "../main.c"
+Invoking: MSP430 Compiler
+"/Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/bin/cl430" -vmspx --code_model=large --data_model=large --use_hw_mpy=F5 --include_path="/Applications/ti/ccs1260/ccs/ccs_base/msp430/include" --include_path="/Users/siou/Downloads/homework/ti/期中考/OutOfBox_MSP-EXP430FR2355" --include_path="/Users/siou/Downloads/homework/ti/期中考/OutOfBox_MSP-EXP430FR2355/jsmn" --include_path="/Users/siou/Downloads/homework/ti/期中考/OutOfBox_MSP-EXP430FR2355/driverlib/MSP430FR2xx_4xx" --include_path="/Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include" --advice:power="all" --advice:hw_config=all --define=__MSP430FR2355__ --define=_FRWP_ENABLE --define=_INFO_FRWP_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+Finished building: "../main.c"
+ 
+Building file: "../functiongenerator.c"
+Invoking: MSP430 Compiler
+"/Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/bin/cl430" -vmspx --code_model=large --data_model=large --use_hw_mpy=F5 --include_path="/Applications/ti/ccs1260/ccs/ccs_base/msp430/include" --include_path="/Users/siou/Downloads/homework/ti/期中考/OutOfBox_MSP-EXP430FR2355" --include_path="/Users/siou/Downloads/homework/ti/期中考/OutOfBox_MSP-EXP430FR2355/jsmn" --include_path="/Users/siou/Downloads/homework/ti/期中考/OutOfBox_MSP-EXP430FR2355/driverlib/MSP430FR2xx_4xx" --include_path="/Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include" --advice:power="all" --advice:hw_config=all --define=__MSP430FR2355__ --define=_FRWP_ENABLE --define=_INFO_FRWP_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --preproc_with_compile --preproc_dependency="functiongenerator.d_raw"  "../functiongenerator.c"
+Finished building: "../functiongenerator.c"
+ 
+Building file: "../driverlib/MSP430FR2xx_4xx/eusci_a_uart.c"
+Invoking: MSP430 Compiler
+"/Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/bin/cl430" -vmspx --code_model=large --data_model=large --use_hw_mpy=F5 --include_path="/Applications/ti/ccs1260/ccs/ccs_base/msp430/include" --include_path="/Users/siou/Downloads/homework/ti/期中考/OutOfBox_MSP-EXP430FR2355" --include_path="/Users/siou/Downloads/homework/ti/期中考/OutOfBox_MSP-EXP430FR2355/jsmn" --include_path="/Users/siou/Downloads/homework/ti/期中考/OutOfBox_MSP-EXP430FR2355/driverlib/MSP430FR2xx_4xx" --include_path="/Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include" --advice:power="all" --advice:hw_config=all --define=__MSP430FR2355__ --define=_FRWP_ENABLE --define=_INFO_FRWP_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --preproc_with_compile --preproc_dependency="driverlib/MSP430FR2xx_4xx/eusci_a_uart.d_raw" --obj_directory="driverlib/MSP430FR2xx_4xx"  "../driverlib/MSP430FR2xx_4xx/eusci_a_uart.c"
+Finished building: "../driverlib/MSP430FR2xx_4xx/eusci_a_uart.c"
+ 
+Building file: "../driverlib/MSP430FR2xx_4xx/eusci_a_spi.c"
+Invoking: MSP430 Compiler
+"/Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/bin/cl430" -vmspx --code_model=large --data_model=large --use_hw_mpy=F5 --include_path="/Applications/ti/ccs1260/ccs/ccs_base/msp430/include" --include_path="/Users/siou/Downloads/homework/ti/期中考/OutOfBox_MSP-EXP430FR2355" --include_path="/Users/siou/Downloads/homework/ti/期中考/OutOfBox_MSP-EXP430FR2355/jsmn" --include_path="/Users/siou/Downloads/homework/ti/期中考/OutOfBox_MSP-EXP430FR2355/driverlib/MSP430FR2xx_4xx" --include_path="/Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include" --advice:power="all" --advice:hw_config=all --define=__MSP430FR2355__ --define=_FRWP_ENABLE --define=_INFO_FRWP_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --preproc_with_compile --preproc_dependency="driverlib/MSP430FR2xx_4xx/eusci_a_spi.d_raw" --obj_directory="driverlib/MSP430FR2xx_4xx"  "../driverlib/MSP430FR2xx_4xx/eusci_a_spi.c"
+Finished building: "../driverlib/MSP430FR2xx_4xx/eusci_a_spi.c"
+ 
+Building file: "../driverlib/MSP430FR2xx_4xx/eusci_b_spi.c"
+Invoking: MSP430 Compiler
+"/Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/bin/cl430" -vmspx --code_model=large --data_model=large --use_hw_mpy=F5 --include_path="/Applications/ti/ccs1260/ccs/ccs_base/msp430/include" --include_path="/Users/siou/Downloads/homework/ti/期中考/OutOfBox_MSP-EXP430FR2355" --include_path="/Users/siou/Downloads/homework/ti/期中考/OutOfBox_MSP-EXP430FR2355/jsmn" --include_path="/Users/siou/Downloads/homework/ti/期中考/OutOfBox_MSP-EXP430FR2355/driverlib/MSP430FR2xx_4xx" --include_path="/Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include" --advice:power="all" --advice:hw_config=all --define=__MSP430FR2355__ --define=_FRWP_ENABLE --define=_INFO_FRWP_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --preproc_with_compile --preproc_dependency="driverlib/MSP430FR2xx_4xx/eusci_b_spi.d_raw" --obj_directory="driverlib/MSP430FR2xx_4xx"  "../driverlib/MSP430FR2xx_4xx/eusci_b_spi.c"
+Finished building: "../driverlib/MSP430FR2xx_4xx/eusci_b_spi.c"
+ 
+Building file: "../driverlib/MSP430FR2xx_4xx/framctl.c"
+Invoking: MSP430 Compiler
+"/Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/bin/cl430" -vmspx --code_model=large --data_model=large --use_hw_mpy=F5 --include_path="/Applications/ti/ccs1260/ccs/ccs_base/msp430/include" --include_path="/Users/siou/Downloads/homework/ti/期中考/OutOfBox_MSP-EXP430FR2355" --include_path="/Users/siou/Downloads/homework/ti/期中考/OutOfBox_MSP-EXP430FR2355/jsmn" --include_path="/Users/siou/Downloads/homework/ti/期中考/OutOfBox_MSP-EXP430FR2355/driverlib/MSP430FR2xx_4xx" --include_path="/Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include" --advice:power="all" --advice:hw_config=all --define=__MSP430FR2355__ --define=_FRWP_ENABLE --define=_INFO_FRWP_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --preproc_with_compile --preproc_dependency="driverlib/MSP430FR2xx_4xx/framctl.d_raw" --obj_directory="driverlib/MSP430FR2xx_4xx"  "../driverlib/MSP430FR2xx_4xx/framctl.c"
+Finished building: "../driverlib/MSP430FR2xx_4xx/framctl.c"
+ 
+Building file: "../driverlib/MSP430FR2xx_4xx/cs.c"
+Invoking: MSP430 Compiler
+"/Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/bin/cl430" -vmspx --code_model=large --data_model=large --use_hw_mpy=F5 --include_path="/Applications/ti/ccs1260/ccs/ccs_base/msp430/include" --include_path="/Users/siou/Downloads/homework/ti/期中考/OutOfBox_MSP-EXP430FR2355" --include_path="/Users/siou/Downloads/homework/ti/期中考/OutOfBox_MSP-EXP430FR2355/jsmn" --include_path="/Users/siou/Downloads/homework/ti/期中考/OutOfBox_MSP-EXP430FR2355/driverlib/MSP430FR2xx_4xx" --include_path="/Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include" --advice:power="all" --advice:hw_config=all --define=__MSP430FR2355__ --define=_FRWP_ENABLE --define=_INFO_FRWP_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --preproc_with_compile --preproc_dependency="driverlib/MSP430FR2xx_4xx/cs.d_raw" --obj_directory="driverlib/MSP430FR2xx_4xx"  "../driverlib/MSP430FR2xx_4xx/cs.c"
+Finished building: "../driverlib/MSP430FR2xx_4xx/cs.c"
+ 
+Building file: "../driverlib/MSP430FR2xx_4xx/eusci_b_i2c.c"
+Invoking: MSP430 Compiler
+"/Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/bin/cl430" -vmspx --code_model=large --data_model=large --use_hw_mpy=F5 --include_path="/Applications/ti/ccs1260/ccs/ccs_base/msp430/include" --include_path="/Users/siou/Downloads/homework/ti/期中考/OutOfBox_MSP-EXP430FR2355" --include_path="/Users/siou/Downloads/homework/ti/期中考/OutOfBox_MSP-EXP430FR2355/jsmn" --include_path="/Users/siou/Downloads/homework/ti/期中考/OutOfBox_MSP-EXP430FR2355/driverlib/MSP430FR2xx_4xx" --include_path="/Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include" --advice:power="all" --advice:hw_config=all --define=__MSP430FR2355__ --define=_FRWP_ENABLE --define=_INFO_FRWP_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --preproc_with_compile --preproc_dependency="driverlib/MSP430FR2xx_4xx/eusci_b_i2c.d_raw" --obj_directory="driverlib/MSP430FR2xx_4xx"  "../driverlib/MSP430FR2xx_4xx/eusci_b_i2c.c"
+Finished building: "../driverlib/MSP430FR2xx_4xx/eusci_b_i2c.c"
+ 
+Building file: "../driverlib/MSP430FR2xx_4xx/gpio.c"
+Invoking: MSP430 Compiler
+"/Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/bin/cl430" -vmspx --code_model=large --data_model=large --use_hw_mpy=F5 --include_path="/Applications/ti/ccs1260/ccs/ccs_base/msp430/include" --include_path="/Users/siou/Downloads/homework/ti/期中考/OutOfBox_MSP-EXP430FR2355" --include_path="/Users/siou/Downloads/homework/ti/期中考/OutOfBox_MSP-EXP430FR2355/jsmn" --include_path="/Users/siou/Downloads/homework/ti/期中考/OutOfBox_MSP-EXP430FR2355/driverlib/MSP430FR2xx_4xx" --include_path="/Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include" --advice:power="all" --advice:hw_config=all --define=__MSP430FR2355__ --define=_FRWP_ENABLE --define=_INFO_FRWP_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --preproc_with_compile --preproc_dependency="driverlib/MSP430FR2xx_4xx/gpio.d_raw" --obj_directory="driverlib/MSP430FR2xx_4xx"  "../driverlib/MSP430FR2xx_4xx/gpio.c"
+Finished building: "../driverlib/MSP430FR2xx_4xx/gpio.c"
+ 
+Building file: "../driverlib/MSP430FR2xx_4xx/lcd_e.c"
+Invoking: MSP430 Compiler
+"/Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/bin/cl430" -vmspx --code_model=large --data_model=large --use_hw_mpy=F5 --include_path="/Applications/ti/ccs1260/ccs/ccs_base/msp430/include" --include_path="/Users/siou/Downloads/homework/ti/期中考/OutOfBox_MSP-EXP430FR2355" --include_path="/Users/siou/Downloads/homework/ti/期中考/OutOfBox_MSP-EXP430FR2355/jsmn" --include_path="/Users/siou/Downloads/homework/ti/期中考/OutOfBox_MSP-EXP430FR2355/driverlib/MSP430FR2xx_4xx" --include_path="/Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include" --advice:power="all" --advice:hw_config=all --define=__MSP430FR2355__ --define=_FRWP_ENABLE --define=_INFO_FRWP_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --preproc_with_compile --preproc_dependency="driverlib/MSP430FR2xx_4xx/lcd_e.d_raw" --obj_directory="driverlib/MSP430FR2xx_4xx"  "../driverlib/MSP430FR2xx_4xx/lcd_e.c"
+Finished building: "../driverlib/MSP430FR2xx_4xx/lcd_e.c"
+ 
+Building file: "../driverlib/MSP430FR2xx_4xx/rtc.c"
+Invoking: MSP430 Compiler
+"/Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/bin/cl430" -vmspx --code_model=large --data_model=large --use_hw_mpy=F5 --include_path="/Applications/ti/ccs1260/ccs/ccs_base/msp430/include" --include_path="/Users/siou/Downloads/homework/ti/期中考/OutOfBox_MSP-EXP430FR2355" --include_path="/Users/siou/Downloads/homework/ti/期中考/OutOfBox_MSP-EXP430FR2355/jsmn" --include_path="/Users/siou/Downloads/homework/ti/期中考/OutOfBox_MSP-EXP430FR2355/driverlib/MSP430FR2xx_4xx" --include_path="/Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include" --advice:power="all" --advice:hw_config=all --define=__MSP430FR2355__ --define=_FRWP_ENABLE --define=_INFO_FRWP_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --preproc_with_compile --preproc_dependency="driverlib/MSP430FR2xx_4xx/rtc.d_raw" --obj_directory="driverlib/MSP430FR2xx_4xx"  "../driverlib/MSP430FR2xx_4xx/rtc.c"
+Finished building: "../driverlib/MSP430FR2xx_4xx/rtc.c"
+ 
+Building file: "../driverlib/MSP430FR2xx_4xx/mpy32.c"
+Invoking: MSP430 Compiler
+"/Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/bin/cl430" -vmspx --code_model=large --data_model=large --use_hw_mpy=F5 --include_path="/Applications/ti/ccs1260/ccs/ccs_base/msp430/include" --include_path="/Users/siou/Downloads/homework/ti/期中考/OutOfBox_MSP-EXP430FR2355" --include_path="/Users/siou/Downloads/homework/ti/期中考/OutOfBox_MSP-EXP430FR2355/jsmn" --include_path="/Users/siou/Downloads/homework/ti/期中考/OutOfBox_MSP-EXP430FR2355/driverlib/MSP430FR2xx_4xx" --include_path="/Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include" --advice:power="all" --advice:hw_config=all --define=__MSP430FR2355__ --define=_FRWP_ENABLE --define=_INFO_FRWP_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --preproc_with_compile --preproc_dependency="driverlib/MSP430FR2xx_4xx/mpy32.d_raw" --obj_directory="driverlib/MSP430FR2xx_4xx"  "../driverlib/MSP430FR2xx_4xx/mpy32.c"
+Finished building: "../driverlib/MSP430FR2xx_4xx/mpy32.c"
+ 
+Building file: "../driverlib/MSP430FR2xx_4xx/pmm.c"
+Invoking: MSP430 Compiler
+"/Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/bin/cl430" -vmspx --code_model=large --data_model=large --use_hw_mpy=F5 --include_path="/Applications/ti/ccs1260/ccs/ccs_base/msp430/include" --include_path="/Users/siou/Downloads/homework/ti/期中考/OutOfBox_MSP-EXP430FR2355" --include_path="/Users/siou/Downloads/homework/ti/期中考/OutOfBox_MSP-EXP430FR2355/jsmn" --include_path="/Users/siou/Downloads/homework/ti/期中考/OutOfBox_MSP-EXP430FR2355/driverlib/MSP430FR2xx_4xx" --include_path="/Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include" --advice:power="all" --advice:hw_config=all --define=__MSP430FR2355__ --define=_FRWP_ENABLE --define=_INFO_FRWP_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --preproc_with_compile --preproc_dependency="driverlib/MSP430FR2xx_4xx/pmm.d_raw" --obj_directory="driverlib/MSP430FR2xx_4xx"  "../driverlib/MSP430FR2xx_4xx/pmm.c"
+Finished building: "../driverlib/MSP430FR2xx_4xx/pmm.c"
+ 
+Building file: "../driverlib/MSP430FR2xx_4xx/icc.c"
+Invoking: MSP430 Compiler
+"/Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/bin/cl430" -vmspx --code_model=large --data_model=large --use_hw_mpy=F5 --include_path="/Applications/ti/ccs1260/ccs/ccs_base/msp430/include" --include_path="/Users/siou/Downloads/homework/ti/期中考/OutOfBox_MSP-EXP430FR2355" --include_path="/Users/siou/Downloads/homework/ti/期中考/OutOfBox_MSP-EXP430FR2355/jsmn" --include_path="/Users/siou/Downloads/homework/ti/期中考/OutOfBox_MSP-EXP430FR2355/driverlib/MSP430FR2xx_4xx" --include_path="/Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include" --advice:power="all" --advice:hw_config=all --define=__MSP430FR2355__ --define=_FRWP_ENABLE --define=_INFO_FRWP_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --preproc_with_compile --preproc_dependency="driverlib/MSP430FR2xx_4xx/icc.d_raw" --obj_directory="driverlib/MSP430FR2xx_4xx"  "../driverlib/MSP430FR2xx_4xx/icc.c"
+Finished building: "../driverlib/MSP430FR2xx_4xx/icc.c"
+ 
+Building file: "../driverlib/MSP430FR2xx_4xx/sfr.c"
+Invoking: MSP430 Compiler
+"/Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/bin/cl430" -vmspx --code_model=large --data_model=large --use_hw_mpy=F5 --include_path="/Applications/ti/ccs1260/ccs/ccs_base/msp430/include" --include_path="/Users/siou/Downloads/homework/ti/期中考/OutOfBox_MSP-EXP430FR2355" --include_path="/Users/siou/Downloads/homework/ti/期中考/OutOfBox_MSP-EXP430FR2355/jsmn" --include_path="/Users/siou/Downloads/homework/ti/期中考/OutOfBox_MSP-EXP430FR2355/driverlib/MSP430FR2xx_4xx" --include_path="/Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include" --advice:power="all" --advice:hw_config=all --define=__MSP430FR2355__ --define=_FRWP_ENABLE --define=_INFO_FRWP_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --preproc_with_compile --preproc_dependency="driverlib/MSP430FR2xx_4xx/sfr.d_raw" --obj_directory="driverlib/MSP430FR2xx_4xx"  "../driverlib/MSP430FR2xx_4xx/sfr.c"
+Finished building: "../driverlib/MSP430FR2xx_4xx/sfr.c"
+ 
+Building file: "../driverlib/MSP430FR2xx_4xx/sac.c"
+Invoking: MSP430 Compiler
+"/Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/bin/cl430" -vmspx --code_model=large --data_model=large --use_hw_mpy=F5 --include_path="/Applications/ti/ccs1260/ccs/ccs_base/msp430/include" --include_path="/Users/siou/Downloads/homework/ti/期中考/OutOfBox_MSP-EXP430FR2355" --include_path="/Users/siou/Downloads/homework/ti/期中考/OutOfBox_MSP-EXP430FR2355/jsmn" --include_path="/Users/siou/Downloads/homework/ti/期中考/OutOfBox_MSP-EXP430FR2355/driverlib/MSP430FR2xx_4xx" --include_path="/Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include" --advice:power="all" --advice:hw_config=all --define=__MSP430FR2355__ --define=_FRWP_ENABLE --define=_INFO_FRWP_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --preproc_with_compile --preproc_dependency="driverlib/MSP430FR2xx_4xx/sac.d_raw" --obj_directory="driverlib/MSP430FR2xx_4xx"  "../driverlib/MSP430FR2xx_4xx/sac.c"
+Finished building: "../driverlib/MSP430FR2xx_4xx/sac.c"
+ 
+Building file: "../driverlib/MSP430FR2xx_4xx/sysctl.c"
+Invoking: MSP430 Compiler
+"/Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/bin/cl430" -vmspx --code_model=large --data_model=large --use_hw_mpy=F5 --include_path="/Applications/ti/ccs1260/ccs/ccs_base/msp430/include" --include_path="/Users/siou/Downloads/homework/ti/期中考/OutOfBox_MSP-EXP430FR2355" --include_path="/Users/siou/Downloads/homework/ti/期中考/OutOfBox_MSP-EXP430FR2355/jsmn" --include_path="/Users/siou/Downloads/homework/ti/期中考/OutOfBox_MSP-EXP430FR2355/driverlib/MSP430FR2xx_4xx" --include_path="/Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include" --advice:power="all" --advice:hw_config=all --define=__MSP430FR2355__ --define=_FRWP_ENABLE --define=_INFO_FRWP_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --preproc_with_compile --preproc_dependency="driverlib/MSP430FR2xx_4xx/sysctl.d_raw" --obj_directory="driverlib/MSP430FR2xx_4xx"  "../driverlib/MSP430FR2xx_4xx/sysctl.c"
+Finished building: "../driverlib/MSP430FR2xx_4xx/sysctl.c"
+ 
+Building file: "../driverlib/MSP430FR2xx_4xx/tia.c"
+Invoking: MSP430 Compiler
+"/Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/bin/cl430" -vmspx --code_model=large --data_model=large --use_hw_mpy=F5 --include_path="/Applications/ti/ccs1260/ccs/ccs_base/msp430/include" --include_path="/Users/siou/Downloads/homework/ti/期中考/OutOfBox_MSP-EXP430FR2355" --include_path="/Users/siou/Downloads/homework/ti/期中考/OutOfBox_MSP-EXP430FR2355/jsmn" --include_path="/Users/siou/Downloads/homework/ti/期中考/OutOfBox_MSP-EXP430FR2355/driverlib/MSP430FR2xx_4xx" --include_path="/Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include" --advice:power="all" --advice:hw_config=all --define=__MSP430FR2355__ --define=_FRWP_ENABLE --define=_INFO_FRWP_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --preproc_with_compile --preproc_dependency="driverlib/MSP430FR2xx_4xx/tia.d_raw" --obj_directory="driverlib/MSP430FR2xx_4xx"  "../driverlib/MSP430FR2xx_4xx/tia.c"
+Finished building: "../driverlib/MSP430FR2xx_4xx/tia.c"
+ 
+Building file: "../driverlib/MSP430FR2xx_4xx/timer_a.c"
+Invoking: MSP430 Compiler
+"/Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/bin/cl430" -vmspx --code_model=large --data_model=large --use_hw_mpy=F5 --include_path="/Applications/ti/ccs1260/ccs/ccs_base/msp430/include" --include_path="/Users/siou/Downloads/homework/ti/期中考/OutOfBox_MSP-EXP430FR2355" --include_path="/Users/siou/Downloads/homework/ti/期中考/OutOfBox_MSP-EXP430FR2355/jsmn" --include_path="/Users/siou/Downloads/homework/ti/期中考/OutOfBox_MSP-EXP430FR2355/driverlib/MSP430FR2xx_4xx" --include_path="/Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include" --advice:power="all" --advice:hw_config=all --define=__MSP430FR2355__ --define=_FRWP_ENABLE --define=_INFO_FRWP_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --preproc_with_compile --preproc_dependency="driverlib/MSP430FR2xx_4xx/timer_a.d_raw" --obj_directory="driverlib/MSP430FR2xx_4xx"  "../driverlib/MSP430FR2xx_4xx/timer_a.c"
+Finished building: "../driverlib/MSP430FR2xx_4xx/timer_a.c"
+ 
+Building file: "../driverlib/MSP430FR2xx_4xx/wdt_a.c"
+Invoking: MSP430 Compiler
+"/Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/bin/cl430" -vmspx --code_model=large --data_model=large --use_hw_mpy=F5 --include_path="/Applications/ti/ccs1260/ccs/ccs_base/msp430/include" --include_path="/Users/siou/Downloads/homework/ti/期中考/OutOfBox_MSP-EXP430FR2355" --include_path="/Users/siou/Downloads/homework/ti/期中考/OutOfBox_MSP-EXP430FR2355/jsmn" --include_path="/Users/siou/Downloads/homework/ti/期中考/OutOfBox_MSP-EXP430FR2355/driverlib/MSP430FR2xx_4xx" --include_path="/Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include" --advice:power="all" --advice:hw_config=all --define=__MSP430FR2355__ --define=_FRWP_ENABLE --define=_INFO_FRWP_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --preproc_with_compile --preproc_dependency="driverlib/MSP430FR2xx_4xx/wdt_a.d_raw" --obj_directory="driverlib/MSP430FR2xx_4xx"  "../driverlib/MSP430FR2xx_4xx/wdt_a.c"
+Finished building: "../driverlib/MSP430FR2xx_4xx/wdt_a.c"
+ 
+Building file: "../driverlib/MSP430FR2xx_4xx/tlv.c"
+Invoking: MSP430 Compiler
+"/Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/bin/cl430" -vmspx --code_model=large --data_model=large --use_hw_mpy=F5 --include_path="/Applications/ti/ccs1260/ccs/ccs_base/msp430/include" --include_path="/Users/siou/Downloads/homework/ti/期中考/OutOfBox_MSP-EXP430FR2355" --include_path="/Users/siou/Downloads/homework/ti/期中考/OutOfBox_MSP-EXP430FR2355/jsmn" --include_path="/Users/siou/Downloads/homework/ti/期中考/OutOfBox_MSP-EXP430FR2355/driverlib/MSP430FR2xx_4xx" --include_path="/Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include" --advice:power="all" --advice:hw_config=all --define=__MSP430FR2355__ --define=_FRWP_ENABLE --define=_INFO_FRWP_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --preproc_with_compile --preproc_dependency="driverlib/MSP430FR2xx_4xx/tlv.d_raw" --obj_directory="driverlib/MSP430FR2xx_4xx"  "../driverlib/MSP430FR2xx_4xx/tlv.c"
+Finished building: "../driverlib/MSP430FR2xx_4xx/tlv.c"
+ 
+Building file: "../driverlib/MSP430FR2xx_4xx/timer_b.c"
+Invoking: MSP430 Compiler
+"/Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/bin/cl430" -vmspx --code_model=large --data_model=large --use_hw_mpy=F5 --include_path="/Applications/ti/ccs1260/ccs/ccs_base/msp430/include" --include_path="/Users/siou/Downloads/homework/ti/期中考/OutOfBox_MSP-EXP430FR2355" --include_path="/Users/siou/Downloads/homework/ti/期中考/OutOfBox_MSP-EXP430FR2355/jsmn" --include_path="/Users/siou/Downloads/homework/ti/期中考/OutOfBox_MSP-EXP430FR2355/driverlib/MSP430FR2xx_4xx" --include_path="/Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include" --advice:power="all" --advice:hw_config=all --define=__MSP430FR2355__ --define=_FRWP_ENABLE --define=_INFO_FRWP_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --preproc_with_compile --preproc_dependency="driverlib/MSP430FR2xx_4xx/timer_b.d_raw" --obj_directory="driverlib/MSP430FR2xx_4xx"  "../driverlib/MSP430FR2xx_4xx/timer_b.c"
+Finished building: "../driverlib/MSP430FR2xx_4xx/timer_b.c"
+ 
+Building file: "../jsmn/jsmn.c"
+Invoking: MSP430 Compiler
+"/Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/bin/cl430" -vmspx --code_model=large --data_model=large --use_hw_mpy=F5 --include_path="/Applications/ti/ccs1260/ccs/ccs_base/msp430/include" --include_path="/Users/siou/Downloads/homework/ti/期中考/OutOfBox_MSP-EXP430FR2355" --include_path="/Users/siou/Downloads/homework/ti/期中考/OutOfBox_MSP-EXP430FR2355/jsmn" --include_path="/Users/siou/Downloads/homework/ti/期中考/OutOfBox_MSP-EXP430FR2355/driverlib/MSP430FR2xx_4xx" --include_path="/Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include" --advice:power="all" --advice:hw_config=all --define=__MSP430FR2355__ --define=_FRWP_ENABLE --define=_INFO_FRWP_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --preproc_with_compile --preproc_dependency="jsmn/jsmn.d_raw" --obj_directory="jsmn"  "../jsmn/jsmn.c"
+Finished building: "../jsmn/jsmn.c"
+ 
+Building target: "OutOfBox_MSP-EXP430FR2355.out"
+Invoking: MSP430 Linker
+"/Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/bin/cl430" -vmspx --code_model=large --data_model=large --use_hw_mpy=F5 --advice:power="all" --advice:hw_config=all --define=__MSP430FR2355__ --define=_FRWP_ENABLE --define=_INFO_FRWP_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 -z -m"OutOfBox_MSP-EXP430FR2355.map" --heap_size=160 --stack_size=160 --cinit_hold_wdt=on -i"/Applications/ti/ccs1260/ccs/ccs_base/msp430/include" -i"/Applications/ti/ccs1260/ccs/ccs_base/msp430/lib/FR2xx" -i"/Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/lib" -i"/Applications/ti/ccs1260/ccs/ccs_base/msp430/lib/5xx_6xx_FRxx" -i"/Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include" --priority --reread_libs --define=_FRWP_ENABLE --define=_INFO_FRWP_ENABLE --diag_wrap=off --display_error_number --warn_sections --xml_link_info="OutOfBox_MSP-EXP430FR2355_linkInfo.xml" --use_hw_mpy=F5 --rom_model -o "OutOfBox_MSP-EXP430FR2355.out" "./functiongenerator.obj" "./lightsensor.obj" "./main.obj" "./driverlib/MSP430FR2xx_4xx/adc.obj" "./driverlib/MSP430FR2xx_4xx/crc.obj" "./driverlib/MSP430FR2xx_4xx/cs.obj" "./driverlib/MSP430FR2xx_4xx/ecomp.obj" "./driverlib/MSP430FR2xx_4xx/eusci_a_spi.obj" "./driverlib/MSP430FR2xx_4xx/eusci_a_uart.obj" "./driverlib/MSP430FR2xx_4xx/eusci_b_i2c.obj" "./driverlib/MSP430FR2xx_4xx/eusci_b_spi.obj" "./driverlib/MSP430FR2xx_4xx/framctl.obj" "./driverlib/MSP430FR2xx_4xx/gpio.obj" "./driverlib/MSP430FR2xx_4xx/icc.obj" "./driverlib/MSP430FR2xx_4xx/lcd_e.obj" "./driverlib/MSP430FR2xx_4xx/mpy32.obj" "./driverlib/MSP430FR2xx_4xx/pmm.obj" "./driverlib/MSP430FR2xx_4xx/rtc.obj" "./driverlib/MSP430FR2xx_4xx/sac.obj" "./driverlib/MSP430FR2xx_4xx/sfr.obj" "./driverlib/MSP430FR2xx_4xx/sysctl.obj" "./driverlib/MSP430FR2xx_4xx/tia.obj" "./driverlib/MSP430FR2xx_4xx/timer_a.obj" "./driverlib/MSP430FR2xx_4xx/timer_b.obj" "./driverlib/MSP430FR2xx_4xx/tlv.obj" "./driverlib/MSP430FR2xx_4xx/wdt_a.obj" "./jsmn/jsmn.obj" "../lnk_msp430fr2355.cmd"  -lfrwp_init.a -llibmath.a -llibc.a 
+<Linking>
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 2 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 5 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port A in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port B in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port C in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: "OutOfBox_MSP-EXP430FR2355.out"
+ 
+Building secondary target: "OutOfBox_MSP-EXP430FR2355.txt"
+Invoking: MSP430 Hex Utility
+"/Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/bin/hex430" --memwidth=8 --romwidth=8 --diag_wrap=off --ti_txt -o "OutOfBox_MSP-EXP430FR2355.txt"  "OutOfBox_MSP-EXP430FR2355.out" 
+Translating to TI-TXT format...
+   "OutOfBox_MSP-EXP430FR2355.out" .TI.persistent ==> .TI.persistent
+   "OutOfBox_MSP-EXP430FR2355.out" .cinit ==> .cinit
+   "OutOfBox_MSP-EXP430FR2355.out" .const ==> .const
+   "OutOfBox_MSP-EXP430FR2355.out" .text ==> .text
+   "OutOfBox_MSP-EXP430FR2355.out" .text:_isr ==> .text:_isr
+   "OutOfBox_MSP-EXP430FR2355.out" $fill000 ==> $fill000
+   "OutOfBox_MSP-EXP430FR2355.out" $fill001 ==> $fill001
+   "OutOfBox_MSP-EXP430FR2355.out" $fill002 ==> $fill002
+   "OutOfBox_MSP-EXP430FR2355.out" $fill003 ==> $fill003
+   "OutOfBox_MSP-EXP430FR2355.out" $fill004 ==> $fill004
+   "OutOfBox_MSP-EXP430FR2355.out" PORT4 ==> PORT4
+   "OutOfBox_MSP-EXP430FR2355.out" PORT3 ==> PORT3
+   "OutOfBox_MSP-EXP430FR2355.out" PORT2 ==> PORT2
+   "OutOfBox_MSP-EXP430FR2355.out" PORT1 ==> PORT1
+   "OutOfBox_MSP-EXP430FR2355.out" SAC1_SAC3 ==> SAC1_SAC3
+   "OutOfBox_MSP-EXP430FR2355.out" SAC0_SAC2 ==> SAC0_SAC2
+   "OutOfBox_MSP-EXP430FR2355.out" ECOMP0_ECOMP1 ==> ECOMP0_ECOMP1
+   "OutOfBox_MSP-EXP430FR2355.out" ADC ==> ADC
+   "OutOfBox_MSP-EXP430FR2355.out" EUSCI_B1 ==> EUSCI_B1
+   "OutOfBox_MSP-EXP430FR2355.out" EUSCI_B0 ==> EUSCI_B0
+   "OutOfBox_MSP-EXP430FR2355.out" EUSCI_A1 ==> EUSCI_A1
+   "OutOfBox_MSP-EXP430FR2355.out" EUSCI_A0 ==> EUSCI_A0
+   "OutOfBox_MSP-EXP430FR2355.out" WDT ==> WDT
+   "OutOfBox_MSP-EXP430FR2355.out" RTC ==> RTC
+   "OutOfBox_MSP-EXP430FR2355.out" TIMER3_B1 ==> TIMER3_B1
+   "OutOfBox_MSP-EXP430FR2355.out" TIMER3_B0 ==> TIMER3_B0
+   "OutOfBox_MSP-EXP430FR2355.out" TIMER2_B1 ==> TIMER2_B1
+   "OutOfBox_MSP-EXP430FR2355.out" TIMER2_B0 ==> TIMER2_B0
+   "OutOfBox_MSP-EXP430FR2355.out" TIMER1_B1 ==> TIMER1_B1
+   "OutOfBox_MSP-EXP430FR2355.out" TIMER1_B0 ==> TIMER1_B0
+   "OutOfBox_MSP-EXP430FR2355.out" TIMER0_B1 ==> TIMER0_B1
+   "OutOfBox_MSP-EXP430FR2355.out" TIMER0_B0 ==> TIMER0_B0
+   "OutOfBox_MSP-EXP430FR2355.out" UNMI ==> UNMI
+   "OutOfBox_MSP-EXP430FR2355.out" SYSNMI ==> SYSNMI
+   "OutOfBox_MSP-EXP430FR2355.out" .reset ==> .reset
+Finished building secondary target: "OutOfBox_MSP-EXP430FR2355.txt"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OutOfBox_MSP-EXP430FR2355 ****
+
+/Applications/ti/ccs1260/ccs/utils/bin/gmake -k -j 7 all -O 
+ 
+Building file: "../lightsensor.c"
+Invoking: MSP430 Compiler
+"/Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/bin/cl430" -vmspx --code_model=large --data_model=large --use_hw_mpy=F5 --include_path="/Applications/ti/ccs1260/ccs/ccs_base/msp430/include" --include_path="/Users/siou/Downloads/homework/ti/期中考/OutOfBox_MSP-EXP430FR2355" --include_path="/Users/siou/Downloads/homework/ti/期中考/OutOfBox_MSP-EXP430FR2355/jsmn" --include_path="/Users/siou/Downloads/homework/ti/期中考/OutOfBox_MSP-EXP430FR2355/driverlib/MSP430FR2xx_4xx" --include_path="/Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include" --advice:power="all" --advice:hw_config=all --define=__MSP430FR2355__ --define=_FRWP_ENABLE --define=_INFO_FRWP_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --preproc_with_compile --preproc_dependency="lightsensor.d_raw"  "../lightsensor.c"
+"../lightsensor.c", line 75: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../lightsensor.c", line 76: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../lightsensor.c", line 151: remark #1546-D: (ULP 15.1) Detected consecutive bitfield assigns. Recommend using bit mask instead
+"../lightsensor.c", line 152: remark #1546-D: (ULP 15.1) Detected consecutive bitfield assigns. Recommend using bit mask instead
+"../lightsensor.c", line 153: remark #1546-D: (ULP 15.1) Detected consecutive bitfield assigns. Recommend using bit mask instead
+"../lightsensor.c", line 154: remark #1546-D: (ULP 15.1) Detected consecutive bitfield assigns. Recommend using bit mask instead
+"../lightsensor.c", line 156: remark #1546-D: (ULP 15.1) Detected consecutive bitfield assigns. Recommend using bit mask instead
+"../lightsensor.c", line 241: remark #1546-D: (ULP 15.1) Detected consecutive bitfield assigns. Recommend using bit mask instead
+"../lightsensor.c", line 242: remark #1546-D: (ULP 15.1) Detected consecutive bitfield assigns. Recommend using bit mask instead
+"../lightsensor.c", line 243: remark #1546-D: (ULP 15.1) Detected consecutive bitfield assigns. Recommend using bit mask instead
+"../lightsensor.c", line 244: remark #1546-D: (ULP 15.1) Detected consecutive bitfield assigns. Recommend using bit mask instead
+"../lightsensor.c", line 245: remark #1546-D: (ULP 15.1) Detected consecutive bitfield assigns. Recommend using bit mask instead
+"../lightsensor.c", line 271: remark #1538-D: (ULP 10.1) ISR TIMER0_B0_ISR calls function GPIO_setOutputHighOnPin. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../lightsensor.c", line 274: remark #1538-D: (ULP 10.1) ISR TIMER0_B0_ISR calls function GPIO_setOutputHighOnPin. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../lightsensor.c", line 280: remark #1538-D: (ULP 10.1) ISR TIMER0_B0_ISR calls function GPIO_setOutputLowOnPin. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../lightsensor.c", line 285: remark #1538-D: (ULP 10.1) ISR TIMER0_B0_ISR calls function GPIO_setOutputLowOnPin. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../lightsensor.c", line 52: remark #1535-D: (ULP 8.1) variable "period" is used as a constant. Recommend declaring variable as either 'static const' or 'const'
+"../lightsensor.c", line 54: remark #1535-D: (ULP 8.1) variable "deadzone" is used as a constant. Recommend declaring variable as either 'static const' or 'const'
+"../lightsensor.c", line 63: remark #1535-D: (ULP 8.1) variable "lightsensor_ADC_Result" is used as a constant. Recommend declaring variable as either 'static const' or 'const'
+Finished building: "../lightsensor.c"
+ 
+Building target: "OutOfBox_MSP-EXP430FR2355.out"
+Invoking: MSP430 Linker
+"/Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/bin/cl430" -vmspx --code_model=large --data_model=large --use_hw_mpy=F5 --advice:power="all" --advice:hw_config=all --define=__MSP430FR2355__ --define=_FRWP_ENABLE --define=_INFO_FRWP_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 -z -m"OutOfBox_MSP-EXP430FR2355.map" --heap_size=160 --stack_size=160 --cinit_hold_wdt=on -i"/Applications/ti/ccs1260/ccs/ccs_base/msp430/include" -i"/Applications/ti/ccs1260/ccs/ccs_base/msp430/lib/FR2xx" -i"/Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/lib" -i"/Applications/ti/ccs1260/ccs/ccs_base/msp430/lib/5xx_6xx_FRxx" -i"/Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include" --priority --reread_libs --define=_FRWP_ENABLE --define=_INFO_FRWP_ENABLE --diag_wrap=off --display_error_number --warn_sections --xml_link_info="OutOfBox_MSP-EXP430FR2355_linkInfo.xml" --use_hw_mpy=F5 --rom_model -o "OutOfBox_MSP-EXP430FR2355.out" "./functiongenerator.obj" "./lightsensor.obj" "./main.obj" "./driverlib/MSP430FR2xx_4xx/adc.obj" "./driverlib/MSP430FR2xx_4xx/crc.obj" "./driverlib/MSP430FR2xx_4xx/cs.obj" "./driverlib/MSP430FR2xx_4xx/ecomp.obj" "./driverlib/MSP430FR2xx_4xx/eusci_a_spi.obj" "./driverlib/MSP430FR2xx_4xx/eusci_a_uart.obj" "./driverlib/MSP430FR2xx_4xx/eusci_b_i2c.obj" "./driverlib/MSP430FR2xx_4xx/eusci_b_spi.obj" "./driverlib/MSP430FR2xx_4xx/framctl.obj" "./driverlib/MSP430FR2xx_4xx/gpio.obj" "./driverlib/MSP430FR2xx_4xx/icc.obj" "./driverlib/MSP430FR2xx_4xx/lcd_e.obj" "./driverlib/MSP430FR2xx_4xx/mpy32.obj" "./driverlib/MSP430FR2xx_4xx/pmm.obj" "./driverlib/MSP430FR2xx_4xx/rtc.obj" "./driverlib/MSP430FR2xx_4xx/sac.obj" "./driverlib/MSP430FR2xx_4xx/sfr.obj" "./driverlib/MSP430FR2xx_4xx/sysctl.obj" "./driverlib/MSP430FR2xx_4xx/tia.obj" "./driverlib/MSP430FR2xx_4xx/timer_a.obj" "./driverlib/MSP430FR2xx_4xx/timer_b.obj" "./driverlib/MSP430FR2xx_4xx/tlv.obj" "./driverlib/MSP430FR2xx_4xx/wdt_a.obj" "./jsmn/jsmn.obj" "../lnk_msp430fr2355.cmd"  -lfrwp_init.a -llibmath.a -llibc.a 
+<Linking>
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 2 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port A in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port B in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port C in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: "OutOfBox_MSP-EXP430FR2355.out"
+ 
+Building secondary target: "OutOfBox_MSP-EXP430FR2355.txt"
+Invoking: MSP430 Hex Utility
+"/Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/bin/hex430" --memwidth=8 --romwidth=8 --diag_wrap=off --ti_txt -o "OutOfBox_MSP-EXP430FR2355.txt"  "OutOfBox_MSP-EXP430FR2355.out" 
+Translating to TI-TXT format...
+   "OutOfBox_MSP-EXP430FR2355.out" .TI.persistent ==> .TI.persistent
+   "OutOfBox_MSP-EXP430FR2355.out" .cinit ==> .cinit
+   "OutOfBox_MSP-EXP430FR2355.out" .const ==> .const
+   "OutOfBox_MSP-EXP430FR2355.out" .text ==> .text
+   "OutOfBox_MSP-EXP430FR2355.out" .text:_isr ==> .text:_isr
+   "OutOfBox_MSP-EXP430FR2355.out" $fill000 ==> $fill000
+   "OutOfBox_MSP-EXP430FR2355.out" $fill001 ==> $fill001
+   "OutOfBox_MSP-EXP430FR2355.out" $fill002 ==> $fill002
+   "OutOfBox_MSP-EXP430FR2355.out" $fill003 ==> $fill003
+   "OutOfBox_MSP-EXP430FR2355.out" $fill004 ==> $fill004
+   "OutOfBox_MSP-EXP430FR2355.out" PORT4 ==> PORT4
+   "OutOfBox_MSP-EXP430FR2355.out" PORT3 ==> PORT3
+   "OutOfBox_MSP-EXP430FR2355.out" PORT2 ==> PORT2
+   "OutOfBox_MSP-EXP430FR2355.out" PORT1 ==> PORT1
+   "OutOfBox_MSP-EXP430FR2355.out" SAC1_SAC3 ==> SAC1_SAC3
+   "OutOfBox_MSP-EXP430FR2355.out" SAC0_SAC2 ==> SAC0_SAC2
+   "OutOfBox_MSP-EXP430FR2355.out" ECOMP0_ECOMP1 ==> ECOMP0_ECOMP1
+   "OutOfBox_MSP-EXP430FR2355.out" ADC ==> ADC
+   "OutOfBox_MSP-EXP430FR2355.out" EUSCI_B1 ==> EUSCI_B1
+   "OutOfBox_MSP-EXP430FR2355.out" EUSCI_B0 ==> EUSCI_B0
+   "OutOfBox_MSP-EXP430FR2355.out" EUSCI_A1 ==> EUSCI_A1
+   "OutOfBox_MSP-EXP430FR2355.out" EUSCI_A0 ==> EUSCI_A0
+   "OutOfBox_MSP-EXP430FR2355.out" WDT ==> WDT
+   "OutOfBox_MSP-EXP430FR2355.out" RTC ==> RTC
+   "OutOfBox_MSP-EXP430FR2355.out" TIMER3_B1 ==> TIMER3_B1
+   "OutOfBox_MSP-EXP430FR2355.out" TIMER3_B0 ==> TIMER3_B0
+   "OutOfBox_MSP-EXP430FR2355.out" TIMER2_B1 ==> TIMER2_B1
+   "OutOfBox_MSP-EXP430FR2355.out" TIMER2_B0 ==> TIMER2_B0
+   "OutOfBox_MSP-EXP430FR2355.out" TIMER1_B1 ==> TIMER1_B1
+   "OutOfBox_MSP-EXP430FR2355.out" TIMER1_B0 ==> TIMER1_B0
+   "OutOfBox_MSP-EXP430FR2355.out" TIMER0_B1 ==> TIMER0_B1
+   "OutOfBox_MSP-EXP430FR2355.out" TIMER0_B0 ==> TIMER0_B0
+   "OutOfBox_MSP-EXP430FR2355.out" UNMI ==> UNMI
+   "OutOfBox_MSP-EXP430FR2355.out" SYSNMI ==> SYSNMI
+   "OutOfBox_MSP-EXP430FR2355.out" .reset ==> .reset
+Finished building secondary target: "OutOfBox_MSP-EXP430FR2355.txt"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OutOfBox_MSP-EXP430FR2355 ****
+
+/Applications/ti/ccs1260/ccs/utils/bin/gmake -k -j 7 all -O 
+ 
+Building file: "../lightsensor.c"
+Invoking: MSP430 Compiler
+"/Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/bin/cl430" -vmspx --code_model=large --data_model=large --use_hw_mpy=F5 --include_path="/Applications/ti/ccs1260/ccs/ccs_base/msp430/include" --include_path="/Users/siou/Downloads/homework/ti/期中考/OutOfBox_MSP-EXP430FR2355" --include_path="/Users/siou/Downloads/homework/ti/期中考/OutOfBox_MSP-EXP430FR2355/jsmn" --include_path="/Users/siou/Downloads/homework/ti/期中考/OutOfBox_MSP-EXP430FR2355/driverlib/MSP430FR2xx_4xx" --include_path="/Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include" --advice:power="all" --advice:hw_config=all --define=__MSP430FR2355__ --define=_FRWP_ENABLE --define=_INFO_FRWP_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --preproc_with_compile --preproc_dependency="lightsensor.d_raw"  "../lightsensor.c"
+"../lightsensor.c", line 75: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../lightsensor.c", line 76: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../lightsensor.c", line 133: remark #1546-D: (ULP 15.1) Detected consecutive bitfield assigns. Recommend using bit mask instead
+"../lightsensor.c", line 134: remark #1546-D: (ULP 15.1) Detected consecutive bitfield assigns. Recommend using bit mask instead
+"../lightsensor.c", line 135: remark #1546-D: (ULP 15.1) Detected consecutive bitfield assigns. Recommend using bit mask instead
+"../lightsensor.c", line 136: remark #1546-D: (ULP 15.1) Detected consecutive bitfield assigns. Recommend using bit mask instead
+"../lightsensor.c", line 138: remark #1546-D: (ULP 15.1) Detected consecutive bitfield assigns. Recommend using bit mask instead
+"../lightsensor.c", line 223: remark #1546-D: (ULP 15.1) Detected consecutive bitfield assigns. Recommend using bit mask instead
+"../lightsensor.c", line 224: remark #1546-D: (ULP 15.1) Detected consecutive bitfield assigns. Recommend using bit mask instead
+"../lightsensor.c", line 225: remark #1546-D: (ULP 15.1) Detected consecutive bitfield assigns. Recommend using bit mask instead
+"../lightsensor.c", line 226: remark #1546-D: (ULP 15.1) Detected consecutive bitfield assigns. Recommend using bit mask instead
+"../lightsensor.c", line 227: remark #1546-D: (ULP 15.1) Detected consecutive bitfield assigns. Recommend using bit mask instead
+"../lightsensor.c", line 253: remark #1538-D: (ULP 10.1) ISR TIMER0_B0_ISR calls function GPIO_setOutputHighOnPin. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../lightsensor.c", line 256: remark #1538-D: (ULP 10.1) ISR TIMER0_B0_ISR calls function GPIO_setOutputHighOnPin. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../lightsensor.c", line 262: remark #1538-D: (ULP 10.1) ISR TIMER0_B0_ISR calls function GPIO_setOutputLowOnPin. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../lightsensor.c", line 267: remark #1538-D: (ULP 10.1) ISR TIMER0_B0_ISR calls function GPIO_setOutputLowOnPin. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../lightsensor.c", line 52: remark #1535-D: (ULP 8.1) variable "period" is used as a constant. Recommend declaring variable as either 'static const' or 'const'
+"../lightsensor.c", line 54: remark #1535-D: (ULP 8.1) variable "deadzone" is used as a constant. Recommend declaring variable as either 'static const' or 'const'
+"../lightsensor.c", line 63: remark #1535-D: (ULP 8.1) variable "lightsensor_ADC_Result" is used as a constant. Recommend declaring variable as either 'static const' or 'const'
+Finished building: "../lightsensor.c"
+ 
+Building target: "OutOfBox_MSP-EXP430FR2355.out"
+Invoking: MSP430 Linker
+"/Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/bin/cl430" -vmspx --code_model=large --data_model=large --use_hw_mpy=F5 --advice:power="all" --advice:hw_config=all --define=__MSP430FR2355__ --define=_FRWP_ENABLE --define=_INFO_FRWP_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 -z -m"OutOfBox_MSP-EXP430FR2355.map" --heap_size=160 --stack_size=160 --cinit_hold_wdt=on -i"/Applications/ti/ccs1260/ccs/ccs_base/msp430/include" -i"/Applications/ti/ccs1260/ccs/ccs_base/msp430/lib/FR2xx" -i"/Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/lib" -i"/Applications/ti/ccs1260/ccs/ccs_base/msp430/lib/5xx_6xx_FRxx" -i"/Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include" --priority --reread_libs --define=_FRWP_ENABLE --define=_INFO_FRWP_ENABLE --diag_wrap=off --display_error_number --warn_sections --xml_link_info="OutOfBox_MSP-EXP430FR2355_linkInfo.xml" --use_hw_mpy=F5 --rom_model -o "OutOfBox_MSP-EXP430FR2355.out" "./functiongenerator.obj" "./lightsensor.obj" "./main.obj" "./driverlib/MSP430FR2xx_4xx/adc.obj" "./driverlib/MSP430FR2xx_4xx/crc.obj" "./driverlib/MSP430FR2xx_4xx/cs.obj" "./driverlib/MSP430FR2xx_4xx/ecomp.obj" "./driverlib/MSP430FR2xx_4xx/eusci_a_spi.obj" "./driverlib/MSP430FR2xx_4xx/eusci_a_uart.obj" "./driverlib/MSP430FR2xx_4xx/eusci_b_i2c.obj" "./driverlib/MSP430FR2xx_4xx/eusci_b_spi.obj" "./driverlib/MSP430FR2xx_4xx/framctl.obj" "./driverlib/MSP430FR2xx_4xx/gpio.obj" "./driverlib/MSP430FR2xx_4xx/icc.obj" "./driverlib/MSP430FR2xx_4xx/lcd_e.obj" "./driverlib/MSP430FR2xx_4xx/mpy32.obj" "./driverlib/MSP430FR2xx_4xx/pmm.obj" "./driverlib/MSP430FR2xx_4xx/rtc.obj" "./driverlib/MSP430FR2xx_4xx/sac.obj" "./driverlib/MSP430FR2xx_4xx/sfr.obj" "./driverlib/MSP430FR2xx_4xx/sysctl.obj" "./driverlib/MSP430FR2xx_4xx/tia.obj" "./driverlib/MSP430FR2xx_4xx/timer_a.obj" "./driverlib/MSP430FR2xx_4xx/timer_b.obj" "./driverlib/MSP430FR2xx_4xx/tlv.obj" "./driverlib/MSP430FR2xx_4xx/wdt_a.obj" "./jsmn/jsmn.obj" "../lnk_msp430fr2355.cmd"  -lfrwp_init.a -llibmath.a -llibc.a 
+<Linking>
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 2 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port A in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port B in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port C in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: "OutOfBox_MSP-EXP430FR2355.out"
+ 
+Building secondary target: "OutOfBox_MSP-EXP430FR2355.txt"
+Invoking: MSP430 Hex Utility
+"/Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/bin/hex430" --memwidth=8 --romwidth=8 --diag_wrap=off --ti_txt -o "OutOfBox_MSP-EXP430FR2355.txt"  "OutOfBox_MSP-EXP430FR2355.out" 
+Translating to TI-TXT format...
+   "OutOfBox_MSP-EXP430FR2355.out" .TI.persistent ==> .TI.persistent
+   "OutOfBox_MSP-EXP430FR2355.out" .cinit ==> .cinit
+   "OutOfBox_MSP-EXP430FR2355.out" .const ==> .const
+   "OutOfBox_MSP-EXP430FR2355.out" .text ==> .text
+   "OutOfBox_MSP-EXP430FR2355.out" .text:_isr ==> .text:_isr
+   "OutOfBox_MSP-EXP430FR2355.out" $fill000 ==> $fill000
+   "OutOfBox_MSP-EXP430FR2355.out" $fill001 ==> $fill001
+   "OutOfBox_MSP-EXP430FR2355.out" $fill002 ==> $fill002
+   "OutOfBox_MSP-EXP430FR2355.out" $fill003 ==> $fill003
+   "OutOfBox_MSP-EXP430FR2355.out" $fill004 ==> $fill004
+   "OutOfBox_MSP-EXP430FR2355.out" PORT4 ==> PORT4
+   "OutOfBox_MSP-EXP430FR2355.out" PORT3 ==> PORT3
+   "OutOfBox_MSP-EXP430FR2355.out" PORT2 ==> PORT2
+   "OutOfBox_MSP-EXP430FR2355.out" PORT1 ==> PORT1
+   "OutOfBox_MSP-EXP430FR2355.out" SAC1_SAC3 ==> SAC1_SAC3
+   "OutOfBox_MSP-EXP430FR2355.out" SAC0_SAC2 ==> SAC0_SAC2
+   "OutOfBox_MSP-EXP430FR2355.out" ECOMP0_ECOMP1 ==> ECOMP0_ECOMP1
+   "OutOfBox_MSP-EXP430FR2355.out" ADC ==> ADC
+   "OutOfBox_MSP-EXP430FR2355.out" EUSCI_B1 ==> EUSCI_B1
+   "OutOfBox_MSP-EXP430FR2355.out" EUSCI_B0 ==> EUSCI_B0
+   "OutOfBox_MSP-EXP430FR2355.out" EUSCI_A1 ==> EUSCI_A1
+   "OutOfBox_MSP-EXP430FR2355.out" EUSCI_A0 ==> EUSCI_A0
+   "OutOfBox_MSP-EXP430FR2355.out" WDT ==> WDT
+   "OutOfBox_MSP-EXP430FR2355.out" RTC ==> RTC
+   "OutOfBox_MSP-EXP430FR2355.out" TIMER3_B1 ==> TIMER3_B1
+   "OutOfBox_MSP-EXP430FR2355.out" TIMER3_B0 ==> TIMER3_B0
+   "OutOfBox_MSP-EXP430FR2355.out" TIMER2_B1 ==> TIMER2_B1
+   "OutOfBox_MSP-EXP430FR2355.out" TIMER2_B0 ==> TIMER2_B0
+   "OutOfBox_MSP-EXP430FR2355.out" TIMER1_B1 ==> TIMER1_B1
+   "OutOfBox_MSP-EXP430FR2355.out" TIMER1_B0 ==> TIMER1_B0
+   "OutOfBox_MSP-EXP430FR2355.out" TIMER0_B1 ==> TIMER0_B1
+   "OutOfBox_MSP-EXP430FR2355.out" TIMER0_B0 ==> TIMER0_B0
+   "OutOfBox_MSP-EXP430FR2355.out" UNMI ==> UNMI
+   "OutOfBox_MSP-EXP430FR2355.out" SYSNMI ==> SYSNMI
+   "OutOfBox_MSP-EXP430FR2355.out" .reset ==> .reset
+Finished building secondary target: "OutOfBox_MSP-EXP430FR2355.txt"
+ 
+
+**** Build Finished ****
