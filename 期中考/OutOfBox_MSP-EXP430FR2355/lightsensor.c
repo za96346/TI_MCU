@@ -213,16 +213,3 @@ void TIMER0_B0_ISR(void)
         GPIO_setOutputLowOnPin(GPIO_PORT_P6, GPIO_PIN6);
     }
 }
-
-#if defined(__TI_COMPILER_VERSION__) || defined(__IAR_SYSTEMS_ICC__)
-#pragma vector=PORT4_VECTOR
-__interrupt void PORT4_ISR(void)
-#elif defined(__GNUC__)
-void __attribute__ ((interrupt(PORT4_VECTOR))) PORT_4_ISR (void)
-#else
-#error Compiler not supported!
-#endif
-{
-    P4IFG &= ~BIT1;                         // Clear P4.1 IFG
-    calibratedADC = lightsensor_ADC_Result;
-}
