@@ -1,11 +1,7 @@
 #include "driverlib.h"
 #include "lightsensor.h"
 
-int led1_dutycycle = 0;
-int led2_dutycycle = 0;
 int calibratedADC = 500;
-int period = 100;
-int counter = 0;
 int deadzone = 5;
 int runningAvg = 500;
 
@@ -31,25 +27,13 @@ void lightsensor() {
 
         if (diff < deadzone) {
             diff *= -1;
-            led1_dutycycle = diff - deadzone;
-            led2_dutycycle = 0;
-
             // 当LED2熄灭时，将P5.2设置为低电平
             P5OUT &= ~BIT2;
         }
         else if (diff > deadzone) {
-            led1_dutycycle = 0;
-            led2_dutycycle = diff - deadzone;
-
             // 当LED2亮时，将P5.2设置为高电平
             P5OUT |= BIT2;
         }
-        else {
-            led1_dutycycle = 0;
-            led2_dutycycle = 0;
-        }
-
-
     }
 }
 
