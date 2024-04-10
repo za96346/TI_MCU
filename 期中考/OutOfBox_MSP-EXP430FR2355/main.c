@@ -4,19 +4,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <jsmn.h>
 
 #include "lightsensor.h"
 
-/* Constants */
-#define MAX_STR_LEN         256
-
-/* UART variables */
-jsmn_parser p;
-jsmntok_t t[64]; /* We expect no more than 64 tokens */
-bool rxStringReady = false;
-char rxString[MAX_STR_LEN];
-char txString[MAX_STR_LEN];
 
 /* Function Declarations */
 void init_GPIO(void);
