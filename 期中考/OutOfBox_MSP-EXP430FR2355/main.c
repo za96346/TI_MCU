@@ -7,6 +7,9 @@
 
 #include "lightsensor.h"
 
+int calibratedADC = 500;
+int deadzone = 5;
+int runningAvg = 500;
 
 /* Function Declarations */
 void init_GPIO(void);
@@ -24,10 +27,24 @@ int main(void)
     init_GPIO();
     init_CS();
     init_EUSCI();
+    lightsensor_init_ADC();
+    lightsensor_init_SACOA();
 	
-    while(1)
+    while(true)
     {
-        lightsensor();
+        __bis_SR_register(LPM0_bits + GIE);
+        runningAvg = (( runningAvg * 9 ) + lightsensor_ADC_Result)/10;
+        int diff = (runningAvg - calibratedADC)/4;
+
+        if (diff < deadzone) {
+            diff *= -1;
+            // 当LED2亮时，将P5.2设置为高电平
+            P5OUT |= BIT2;
+        }
+        else if (diff > deadzone) {
+            // 当LED2熄灭时，将P5.2设置为低电平
+            P5OUT &= ~BIT2;
+        }
     }
 }
 
@@ -48,6 +65,10 @@ void init_GPIO(void) {
     PMM_unlockLPM5();
 
     GPIO_clearInterrupt(GPIO_PORT_P2, GPIO_PIN3);
+
+    // 将P5.2设置为输出模式
+    P5DIR |= BIT2;  // 将P5.2设为输出
+    P5OUT &= ~BIT2; // 初始状态设置为低电平
 }
 
 void init_CS(void) {

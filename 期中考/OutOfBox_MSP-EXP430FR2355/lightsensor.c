@@ -1,10 +1,6 @@
 #include "driverlib.h"
 #include "lightsensor.h"
 
-int calibratedADC = 500;
-int deadzone = 5;
-int runningAvg = 500;
-
 /* FRAM Variable that stores lightsensor ADC results*/
 #if defined(__TI_COMPILER_VERSION__)
 #pragma PERSISTENT(lightsensor_ADC_Result)
@@ -12,47 +8,6 @@ int runningAvg = 500;
 __persistent
 #endif
 unsigned int lightsensor_ADC_Result = 0;          // ADC conversion result
-
-void lightsensor() {
-    /* Initialize peripherals */
-    lightsensor_init_GPIO();
-    lightsensor_init_SACOA();
-    lightsensor_init_ADC();
-
-    while(true){
-        __bis_SR_register(LPM0_bits + GIE);
-
-        runningAvg = (( runningAvg * 9 ) + lightsensor_ADC_Result)/10;
-        int diff = (runningAvg - calibratedADC)/4;
-
-        if (diff < deadzone) {
-            diff *= -1;
-            // 当LED2亮时，将P5.2设置为高电平
-            P5OUT |= BIT2;
-        }
-        else if (diff > deadzone) {
-            // 当LED2熄灭时，将P5.2设置为低电平
-            P5OUT &= ~BIT2;
-        }
-    }
-}
-
-void lightsensor_init_GPIO(void) {
-    //Set Px.x to output direction
-
-    P1DIR |= 0xFF;
-    P1OUT = 0x00;
-
-    P3DIR |= 0xFF;
-    P3OUT = 0x00;
-
-    P6DIR |= 0xFF;
-    P6OUT = 0x00;
-
-    // 将P5.2设置为输出模式
-    P5DIR |= BIT2;  // 将P5.2设为输出
-    P5OUT &= ~BIT2; // 初始状态设置为低电平
-}
 
 void lightsensor_init_SACOA(void) {
     //Configure Op-Amp functionality
