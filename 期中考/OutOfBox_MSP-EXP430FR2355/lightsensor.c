@@ -7,7 +7,11 @@
 #elif defined(__IAR_SYSTEMS_ICC__)
 __persistent
 #endif
+
 unsigned int lightsensor_ADC_Result = 0;          // ADC conversion result
+int calibratedADC = 500;
+int deadzone = 5;
+int runningAvg = 500;
 
 void lightsensor_init_SACOA(void) {
     //Configure Op-Amp functionality

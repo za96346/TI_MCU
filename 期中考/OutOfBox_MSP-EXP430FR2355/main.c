@@ -7,9 +7,6 @@
 
 #include "lightsensor.h"
 
-int calibratedADC = 500;
-int deadzone = 5;
-int runningAvg = 500;
 
 /* Function Declarations */
 void init_GPIO(void);
@@ -49,19 +46,6 @@ int main(void)
 }
 
 void init_GPIO(void) {
-    /* Initialize all GPIO to output low for minimal LPM power consumption */
-    GPIO_setAsOutputPin(GPIO_PORT_PA, GPIO_PIN_ALL16);
-    GPIO_setAsOutputPin(GPIO_PORT_PB, GPIO_PIN_ALL16);
-    GPIO_setAsOutputPin(GPIO_PORT_PC, GPIO_PIN_ALL16);
-    GPIO_setAsOutputPin(GPIO_PORT_PD, GPIO_PIN_ALL16);
-    GPIO_setAsOutputPin(GPIO_PORT_PE, GPIO_PIN_ALL16);
-
-    GPIO_setOutputLowOnPin(GPIO_PORT_PA, GPIO_PIN_ALL16);
-    GPIO_setOutputLowOnPin(GPIO_PORT_PB, GPIO_PIN_ALL16);
-    GPIO_setOutputLowOnPin(GPIO_PORT_PC, GPIO_PIN_ALL16);
-    GPIO_setOutputLowOnPin(GPIO_PORT_PD, GPIO_PIN_ALL16);
-    GPIO_setOutputLowOnPin(GPIO_PORT_PE, GPIO_PIN_ALL16);
-
     PMM_unlockLPM5();
 
     GPIO_clearInterrupt(GPIO_PORT_P2, GPIO_PIN3);

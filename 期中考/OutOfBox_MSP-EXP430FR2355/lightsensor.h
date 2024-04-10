@@ -6,6 +6,12 @@
 #define TIMER_PERIOD 650
 #define DUTY_CYCLE  325
 
+
+extern int calibratedADC;
+extern int deadzone;
+extern int runningAvg;
+
+
 // Appliation mode
 extern char mode;
 
