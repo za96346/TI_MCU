@@ -28,14 +28,12 @@ int main(void)
     {
         __bis_SR_register(LPM0_bits + GIE);
         runningAvg = (( runningAvg * 9 ) + lightsensor_ADC_Result)/10;
-        int diff = (runningAvg - calibratedADC)/4;
+        int diff = (runningAvg - calibratedADC) / 4;
 
         if (diff < deadzone) {
-            diff *= -1;
             // 将P5.2设置为高电平
             P5OUT |= BIT2;
-        }
-        else if (diff > deadzone) {
+        } else {
             // 将P5.2设置为低电平
             P5OUT &= ~BIT2;
         }
