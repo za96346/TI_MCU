@@ -32,11 +32,11 @@ int main(void)
 
         if (diff < deadzone) {
             diff *= -1;
-            // 当LED2亮时，将P5.2设置为高电平
+            // 将P5.2设置为高电平
             P5OUT |= BIT2;
         }
         else if (diff > deadzone) {
-            // 当LED2熄灭时，将P5.2设置为低电平
+            // 将P5.2设置为低电平
             P5OUT &= ~BIT2;
         }
     }
