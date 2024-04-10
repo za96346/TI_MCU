@@ -6,9 +6,13 @@
 #define TIMER_PERIOD 650
 #define DUTY_CYCLE  325
 
-
+// 光感器校准值
 extern int calibratedADC;
+
+// 死區
 extern int deadzone;
+
+// ADC 结果的运行平均值
 extern int runningAvg;
 
 
