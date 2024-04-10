@@ -13,6 +13,19 @@ int calibratedADC = 500;
 int deadzone = 5;
 int runningAvg = 500;
 
+/**
+ * lightsensor_init_SACOA 函数的作用是初始化Sigma-Delta 模数转换器（SAC - Sigma-Delta Analog-to-Digital Converter）的运算放大器（OA）。这个函数主要负责配置运算放大器的输入、输出和电源模式，以便与光传感器一起使用。具体来说，函数的作用包括：
+
+    1. 设置外设功能的GPIO：通过GPIO_setAsPeripheralModuleFunctionInputPin函数，选择特定的GPIO引脚用于运算放大器的正负输入。这一步确保了运算放大器能够接收来自光传感器的模拟信号。
+
+    2. 初始化运算放大器模块：使用SAC_OA_init函数配置运算放大器的正负输入源。例如，设置正输入和负输入都来自外部源，或者正输入来自外部，负输入来自内部的可编程增益放大器（PGA）。
+
+    3. 选择电源模式：通过SAC_OA_selectPowerMode函数选择运算放大器的电源模式，例如选择低速低功耗模式以减少整体功耗。
+
+    4. 启用运算放大器和SAC模块：使用SAC_OA_enable和SAC_enable函数来启用运算放大器和SAC模块，使其开始工作。
+
+    5. 通过以上步骤，lightsensor_init_SACOA 函数确保了运算放大器正确配置，并能够处理来自光传感器的模拟信号。这对于光传感器的信号调节非常重要，因为运算放大器可以用来放大或调整传感器的信号，以便更适合于后续的模数转换（ADC）。
+*/
 void lightsensor_init_SACOA(void) {
     //Configure Op-Amp functionality
     GPIO_setAsPeripheralModuleFunctionInputPin(GPIO_PORT_P3,
@@ -37,6 +50,23 @@ void lightsensor_init_SACOA(void) {
     SAC_enable(SAC0_BASE);                     // Enable SAC0
 }
 
+/**
+ * lightsensor_init_ADC函数的作用是初始化模数转换器（ADC）模块，使其准备好进行光传感器信号的数字化。这个函数主要负责配置ADC的各种参数，以确保正确、有效地读取模拟信号并将其转换为数字值。具体来说，这个函数执行以下操作：
+
+    1. 配置ADC模块：通过ADC_init函数，设置ADC的基本参数，如采样/保持信号源、时钟源和时钟分频器。这些设置影响ADC的采样速率和准确性。
+
+    2. 设置采样时间：通过ADC_setupSamplingTimer函数，配置ADC的采样/保持时间。这个时间决定了ADC在转换前保持输入信号稳定的时间长度，对于提高转换精度非常重要。
+
+    3. 选择分辨率：通过ADC_setResolution函数，设置ADC的分辨率（例如12位）。分辨率决定了ADC可以区分的最小电压变化，高分辨率意味着更精细的测量结果。
+
+    4. 配置内存缓冲区：通过ADC_configureMemory函数，设置ADC模块的内存缓冲区，以存储转换结果。这包括选择输入通道、正负参考电压等。
+
+    5. 清除和使能中断：通过ADC_clearInterrupt和ADC_enableInterrupt函数，清除旧的中断标志并使能新的中断。这样，当ADC完成一个转换周期后，可以生成一个中断信号。
+
+    6. 启动转换：虽然在lightsensor_init_ADC函数中没有直接启动ADC转换，但通过配置完毕后，系统就准备好根据其他函数（如主循环中的lightsensor函数）的触发来启动和进行ADC转换。
+
+    总之，lightsensor_init_ADC函数确保ADC模块被正确配置，能够准确地读取光传感器产生的模拟信号并将其转换为数字值，以便后续处理和分析。这是实现光传感器功能的关键步骤之一。
+*/
 void lightsensor_init_ADC(void) {
     //Initialize the ADC Module
     /*

@@ -10,7 +10,7 @@
 
 /* Function Declarations */
 void init_GPIO(void);
-void init_CS(void);
+
 void init_EUSCI(void);
 
 /**
@@ -22,7 +22,6 @@ int main(void)
     WDT_A_hold(WDT_A_BASE);
 
     init_GPIO();
-    init_CS();
     init_EUSCI();
     lightsensor_init_ADC();
     lightsensor_init_SACOA();
@@ -53,33 +52,6 @@ void init_GPIO(void) {
     // 将P5.2设置为输出模式
     P5DIR |= BIT2;  // 将P5.2设为输出
     P5OUT &= ~BIT2; // 初始状态设置为低电平
-}
-
-void init_CS(void) {
-    FRCTL0 = FRCTLPW | NWAITS_2 ;                // 设置FRAM等待状态。当主时钟（MCLK）频率超过8MHz时，需要增加等待状态以满足FRAM的时序要求。
-
-    P2SEL1 |= BIT6 | BIT7;                       // 配置P2.6和P2.7引脚作为晶体振荡器引脚，用于外部时钟源。
-    do
-    {
-        CSCTL7 &= ~(XT1OFFG | DCOFFG);           // Clear XT1 and DCO fault flag
-        SFRIFG1 &= ~OFIFG;
-    } while (SFRIFG1 & OFIFG);                   // 循环检测并清除振荡器故障标志，确保时钟源稳定。
-
-    __bis_SR_register(SCG0);                     // 禁用频率锁定环（FLL），准备进行时钟设置
-    CSCTL3 |= SELREF__XT1CLK;                    // Set XT1 as FLL reference source
-    CSCTL0 = 0;                                  // clear DCO and MOD registers
-    CSCTL1 = DCORSEL_7;                         // Set DCO = 24MHz
-    CSCTL2 = FLLD_0 + 731;                       // DCOCLKDIV = 24MHz
-    __delay_cycles(3);
-    __bic_SR_register(SCG0);                     // 重新启用FLL，完成时钟设置
-    while(CSCTL7 & (FLLUNLOCK0 | FLLUNLOCK1));   // 循环等待直到FLL锁定，确保时钟稳定
-
-    CSCTL4 = SELMS__DCOCLKDIV | SELA__XT1CLK;   // set XT1 (~32768Hz) as ACLK source, ACLK = 32768Hz
-                                                 // default DCOCLKDIV as MCLK and SMCLK source
-    
-    P3DIR |= BIT4;
-    P3SEL0 |= BIT4;
-    P3SEL1 &= ~BIT4;
 }
 
 // Initialize EUSCI
