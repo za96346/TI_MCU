@@ -3,35 +3,23 @@
 
 /Applications/ti/ccs1260/ccs/utils/bin/gmake -k -j 7 all -O 
  
-Building file: "../lightsensor.c"
+Building file: "../main.c"
 Invoking: MSP430 Compiler
-"/Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/bin/cl430" -vmspx --code_model=large --data_model=large --use_hw_mpy=F5 --include_path="/Applications/ti/ccs1260/ccs/ccs_base/msp430/include" --include_path="/Users/siou/Downloads/homework/ti/期中考/OutOfBox_MSP-EXP430FR2355" --include_path="/Users/siou/Downloads/homework/ti/期中考/OutOfBox_MSP-EXP430FR2355/jsmn" --include_path="/Users/siou/Downloads/homework/ti/期中考/OutOfBox_MSP-EXP430FR2355/driverlib/MSP430FR2xx_4xx" --include_path="/Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include" --advice:power="all" --advice:hw_config=all --define=__MSP430FR2355__ --define=_FRWP_ENABLE --define=_INFO_FRWP_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --preproc_with_compile --preproc_dependency="lightsensor.d_raw"  "../lightsensor.c"
-"../lightsensor.c", line 75: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
-"../lightsensor.c", line 76: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
-"../lightsensor.c", line 133: remark #1546-D: (ULP 15.1) Detected consecutive bitfield assigns. Recommend using bit mask instead
-"../lightsensor.c", line 134: remark #1546-D: (ULP 15.1) Detected consecutive bitfield assigns. Recommend using bit mask instead
-"../lightsensor.c", line 135: remark #1546-D: (ULP 15.1) Detected consecutive bitfield assigns. Recommend using bit mask instead
-"../lightsensor.c", line 136: remark #1546-D: (ULP 15.1) Detected consecutive bitfield assigns. Recommend using bit mask instead
-"../lightsensor.c", line 138: remark #1546-D: (ULP 15.1) Detected consecutive bitfield assigns. Recommend using bit mask instead
-"../lightsensor.c", line 223: remark #1546-D: (ULP 15.1) Detected consecutive bitfield assigns. Recommend using bit mask instead
-"../lightsensor.c", line 224: remark #1546-D: (ULP 15.1) Detected consecutive bitfield assigns. Recommend using bit mask instead
-"../lightsensor.c", line 225: remark #1546-D: (ULP 15.1) Detected consecutive bitfield assigns. Recommend using bit mask instead
-"../lightsensor.c", line 226: remark #1546-D: (ULP 15.1) Detected consecutive bitfield assigns. Recommend using bit mask instead
-"../lightsensor.c", line 227: remark #1546-D: (ULP 15.1) Detected consecutive bitfield assigns. Recommend using bit mask instead
-"../lightsensor.c", line 253: remark #1538-D: (ULP 10.1) ISR TIMER0_B0_ISR calls function GPIO_setOutputHighOnPin. Recommend moving function call away from ISR, or inlining the function, or using pragmas
-"../lightsensor.c", line 256: remark #1538-D: (ULP 10.1) ISR TIMER0_B0_ISR calls function GPIO_setOutputHighOnPin. Recommend moving function call away from ISR, or inlining the function, or using pragmas
-"../lightsensor.c", line 262: remark #1538-D: (ULP 10.1) ISR TIMER0_B0_ISR calls function GPIO_setOutputLowOnPin. Recommend moving function call away from ISR, or inlining the function, or using pragmas
-"../lightsensor.c", line 267: remark #1538-D: (ULP 10.1) ISR TIMER0_B0_ISR calls function GPIO_setOutputLowOnPin. Recommend moving function call away from ISR, or inlining the function, or using pragmas
-"../lightsensor.c", line 52: remark #1535-D: (ULP 8.1) variable "period" is used as a constant. Recommend declaring variable as either 'static const' or 'const'
-"../lightsensor.c", line 54: remark #1535-D: (ULP 8.1) variable "deadzone" is used as a constant. Recommend declaring variable as either 'static const' or 'const'
-"../lightsensor.c", line 63: remark #1535-D: (ULP 8.1) variable "lightsensor_ADC_Result" is used as a constant. Recommend declaring variable as either 'static const' or 'const'
-Finished building: "../lightsensor.c"
+"/Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/bin/cl430" -vmspx --code_model=large --data_model=large --use_hw_mpy=F5 --include_path="/Applications/ti/ccs1260/ccs/ccs_base/msp430/include" --include_path="/Users/siou/Downloads/homework/ti/期中考/OutOfBox_MSP-EXP430FR2355" --include_path="/Users/siou/Downloads/homework/ti/期中考/OutOfBox_MSP-EXP430FR2355/jsmn" --include_path="/Users/siou/Downloads/homework/ti/期中考/OutOfBox_MSP-EXP430FR2355/driverlib/MSP430FR2xx_4xx" --include_path="/Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include" --advice:power="all" --advice:hw_config=all --define=__MSP430FR2355__ --define=_FRWP_ENABLE --define=_INFO_FRWP_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 42: warning #1-D: last line of file ends without a newline
+"../main.c", line 30: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 31: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+Finished building: "../main.c"
  
 Building target: "OutOfBox_MSP-EXP430FR2355.out"
 Invoking: MSP430 Linker
 "/Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/bin/cl430" -vmspx --code_model=large --data_model=large --use_hw_mpy=F5 --advice:power="all" --advice:hw_config=all --define=__MSP430FR2355__ --define=_FRWP_ENABLE --define=_INFO_FRWP_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 -z -m"OutOfBox_MSP-EXP430FR2355.map" --heap_size=160 --stack_size=160 --cinit_hold_wdt=on -i"/Applications/ti/ccs1260/ccs/ccs_base/msp430/include" -i"/Applications/ti/ccs1260/ccs/ccs_base/msp430/lib/FR2xx" -i"/Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/lib" -i"/Applications/ti/ccs1260/ccs/ccs_base/msp430/lib/5xx_6xx_FRxx" -i"/Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include" --priority --reread_libs --define=_FRWP_ENABLE --define=_INFO_FRWP_ENABLE --diag_wrap=off --display_error_number --warn_sections --xml_link_info="OutOfBox_MSP-EXP430FR2355_linkInfo.xml" --use_hw_mpy=F5 --rom_model -o "OutOfBox_MSP-EXP430FR2355.out" "./functiongenerator.obj" "./lightsensor.obj" "./main.obj" "./driverlib/MSP430FR2xx_4xx/adc.obj" "./driverlib/MSP430FR2xx_4xx/crc.obj" "./driverlib/MSP430FR2xx_4xx/cs.obj" "./driverlib/MSP430FR2xx_4xx/ecomp.obj" "./driverlib/MSP430FR2xx_4xx/eusci_a_spi.obj" "./driverlib/MSP430FR2xx_4xx/eusci_a_uart.obj" "./driverlib/MSP430FR2xx_4xx/eusci_b_i2c.obj" "./driverlib/MSP430FR2xx_4xx/eusci_b_spi.obj" "./driverlib/MSP430FR2xx_4xx/framctl.obj" "./driverlib/MSP430FR2xx_4xx/gpio.obj" "./driverlib/MSP430FR2xx_4xx/icc.obj" "./driverlib/MSP430FR2xx_4xx/lcd_e.obj" "./driverlib/MSP430FR2xx_4xx/mpy32.obj" "./driverlib/MSP430FR2xx_4xx/pmm.obj" "./driverlib/MSP430FR2xx_4xx/rtc.obj" "./driverlib/MSP430FR2xx_4xx/sac.obj" "./driverlib/MSP430FR2xx_4xx/sfr.obj" "./driverlib/MSP430FR2xx_4xx/sysctl.obj" "./driverlib/MSP430FR2xx_4xx/tia.obj" "./driverlib/MSP430FR2xx_4xx/timer_a.obj" "./driverlib/MSP430FR2xx_4xx/timer_b.obj" "./driverlib/MSP430FR2xx_4xx/tlv.obj" "./driverlib/MSP430FR2xx_4xx/wdt_a.obj" "./jsmn/jsmn.obj" "../lnk_msp430fr2355.cmd"  -lfrwp_init.a -llibmath.a -llibc.a 
 <Linking>
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 1 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
 remark #10372-D: (ULP 4.1) Detected uninitialized Port 2 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 3 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 4 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 6 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
 remark #10372-D: (ULP 4.1) Detected uninitialized Port A in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
 remark #10372-D: (ULP 4.1) Detected uninitialized Port B in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
 remark #10372-D: (ULP 4.1) Detected uninitialized Port C in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.

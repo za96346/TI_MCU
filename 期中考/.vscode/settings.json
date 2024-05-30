@@ -1,0 +1,16 @@
+{
+    "files.associations": {
+        "*.embeddedhtml": "html",
+        "*.tpl": "html",
+        "*.cs": "csharp",
+        "dockerfile_node": "dockerfile",
+        "*.tpe": "html",
+        "lightsensor.h": "c",
+        "stdlib.h": "c",
+        "stdio.h": "c",
+        "stdint.h": "c",
+        "jsmn.h": "c",
+        "string.h": "c",
+        "driverlib.h": "c"
+    }
+}

@@ -43,15 +43,9 @@ main.obj: /Users/siou/Downloads/homework/ti/æä¸­è/OutOfBox_MSP-EXP4
 main.obj: /Users/siou/Downloads/homework/ti/æä¸­è/OutOfBox_MSP-EXP430FR2355/driverlib/MSP430FR2xx_4xx/timer_b.h
 main.obj: /Users/siou/Downloads/homework/ti/æä¸­è/OutOfBox_MSP-EXP430FR2355/driverlib/MSP430FR2xx_4xx/tlv.h
 main.obj: /Users/siou/Downloads/homework/ti/æä¸­è/OutOfBox_MSP-EXP430FR2355/driverlib/MSP430FR2xx_4xx/wdt_a.h
+main.obj: ../lightsensor.h
 main.obj: /Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include/stdio.h
 main.obj: /Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include/stdarg.h
-main.obj: /Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include/stdlib.h
-main.obj: /Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include/string.h
-main.obj: /Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include/xlocale/_string.h
-main.obj: /Users/siou/Downloads/homework/ti/æä¸­è/OutOfBox_MSP-EXP430FR2355/jsmn/jsmn.h
-main.obj: /Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include/stddef.h
-main.obj: ../lightsensor.h
-main.obj: ../functiongenerator.h
 
 ../main.c:
 
@@ -139,21 +133,9 @@ main.obj: ../functiongenerator.h
 
 /Users/siou/Downloads/homework/ti/æä¸­è/OutOfBox_MSP-EXP430FR2355/driverlib/MSP430FR2xx_4xx/wdt_a.h:
 
+../lightsensor.h:
+
 /Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include/stdio.h:
 
 /Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include/stdarg.h:
-
-/Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include/stdlib.h:
-
-/Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include/string.h:
-
-/Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include/xlocale/_string.h:
-
-/Users/siou/Downloads/homework/ti/æä¸­è/OutOfBox_MSP-EXP430FR2355/jsmn/jsmn.h:
-
-/Applications/ti/ccs1260/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include/stddef.h:
-
-../lightsensor.h:
-
-../functiongenerator.h:
 

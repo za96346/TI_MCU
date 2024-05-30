@@ -1,0 +1,11 @@
+{
+    "C_Cpp.errorSquiggles": "disabled",
+    "files.associations": {
+        "*.embeddedhtml": "html",
+        "*.tpl": "html",
+        "*.cs": "csharp",
+        "dockerfile_node": "dockerfile",
+        "*.tpe": "html",
+        "driverlib.h": "c"
+    }
+}
